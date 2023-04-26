@@ -4,12 +4,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
-import LoginScreen from './screens/home';
+import LoginScreen from './screens/welcome';
 import SignupScreen from './screens/SingUp';
-import WelcomeScreen from './screens/welcome';
+import HomeScreen from './screens/home';
 import { Colors } from './styles/index';
 
 const Stack = createNativeStackNavigator();
+
 
 function AuthStack() {
   return (
@@ -17,28 +18,16 @@ function AuthStack() {
       screenOptions={{
         headerStyle: { backgroundColor: Colors.background },
         headerTintColor: 'white',
-        contentStyle: { backgroundColor: Colors.primary },
+        contentStyle: { backgroundColor: Colors.background },
       }}
     >
       <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="Signup" component={SignupScreen} />
+      <Stack.Screen name="SignUp" component={SignupScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
     </Stack.Navigator>
   );
 }
 
-function AuthenticatedStack() {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerStyle: { backgroundColor: Colors.primary},
-        headerTintColor: 'white',
-        contentStyle: { backgroundColor: Colors.primary },
-      }}
-    >
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
-    </Stack.Navigator>
-  );
-}
 
 function Navigation() {
   return (
@@ -52,7 +41,6 @@ export default function App() {
   return (
     <>
       <StatusBar style="light" />
-
       <Navigation />
     </>
   );
