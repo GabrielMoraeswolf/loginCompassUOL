@@ -3,9 +3,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
-import LoginScreen from './screens/welcome';
-import SignupScreen from './screens/SingUp';
-import HomeScreen from './screens/home';
+import LoginScreen from './screens/welcome/welcome';
+import SignupScreen from './screens/singUp/SingUp';
+import HomeScreen from './screens/home/home';
 import { Colors } from './styles/index';
 
 const Stack = createNativeStackNavigator();

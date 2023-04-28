@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View,FlatList,Pressable,SafeAreaView} from 'react-native';
-import { Colors } from '../styles/index';
+import {  Text, View,FlatList,Pressable,SafeAreaView} from 'react-native';
+import styles from './index'
 import React, { useState } from 'react';
-import{ NavProps } from '../types/navigation';
+
 
 const Arry =[
   {id:'1',value:'1'},
@@ -35,30 +35,5 @@ function HomeScreen() {
   );
   }
 
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    backgroundColor: Colors.background,
-    paddingHorizontal: 16,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems:'center',
-    marginBottom: 10,
-    marginTop:50
-  },
-  card:{
-    flex:1,
-    backgroundColor: Colors.card,
-    height:226,
-    width:186,
-    margin: 5,
-    borderRadius:10,
-  },
-  title: {      
-    color: Colors.primary,
-    marginBottom: '25%',
-    fontSize: 36
-  },
-});
 
 export default HomeScreen;
