@@ -3,28 +3,31 @@ import { StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
+      alignItems: 'flex-start',
       justifyContent: 'center',
     },
     image:{
       marginHorizontal: 10,
     },
     checkbox:{
-      alignItems: 'flex-start',
+      alignItems: 'center',
       flexDirection: 'row',
+      marginLeft: 20,
       marginTop: 5,
       marginBottom: 5
     },
     title: {      
      color: Colors.primary,
      marginBottom: '25%',
-     fontSize: 36
+     fontSize: 36,
+     marginLeft: '30%',
+     marginTop: '10%',
     },
     termsText:{
       color: Colors.inputPlaceHolder,
       fontSize: 13,
       marginTop: 5,
-      marginLeft: 2
+      marginLeft: 5,
     },
     errorText: {
       alignItems: 'flex-start',
@@ -32,6 +35,7 @@ const styles = StyleSheet.create({
       textAlign: 'left',
       color: Colors.erro,
       marginTop: -12,
+      marginLeft: 60
     },
     inputContainer:{
       flexDirection: 'row',
@@ -63,6 +67,8 @@ const styles = StyleSheet.create({
       padding: 10,
       marginBottom: 16,
       marginTop: 20,
+      marginLeft: 35,
+      marginRight: 35,
       alignItems: 'center',
     },
     invalidLabel: {
@@ -75,8 +81,16 @@ const styles = StyleSheet.create({
       padding: 5,
       alignItems: 'center',
     },
-    spaceSingUp:{
+    line:{
+      backgroundColor: Colors.primary,
+      width:'100%',
+      height:1,
       marginTop: '20%'
+    },
+    spaceSingUp:{
+      marginTop: 20,
+      marginBottom:20,  
+      marginLeft: '15%'
     },
     singUp: {
       color: Colors.primary

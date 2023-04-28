@@ -74,6 +74,7 @@ function LoginScreen({ navigation } :NavProps) {
         <TouchableOpacity style={styles.button} onPress={handleLogin}> 
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>
+        <View style={styles.line} />
         <Pressable style={styles.spaceSingUp}>
           <Text style={styles.buttonText}>Don't have an account?
             <Text style={styles.singUp} onPress={handleSingUp}> Sing Up</Text>

@@ -3,6 +3,7 @@ import Checkbox from 'expo-checkbox';
 import styles from './index'
 import React, { useState } from 'react';
 import{ NavProps } from '../../types/navigation';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const icons={
   mail:require('../../assets/mail_.png'),
@@ -105,20 +106,25 @@ function SignupScreen({ navigation } :NavProps) {
             onValueChange={setChecked}
             color={isChecked ? '#4630EB' : undefined}
           />
-          <Text style={styles.termsText} > Agree To Terns And Conditions</Text>
+          <Text style={styles.termsText}>
+            Agree To 
+            <Text style={{textDecorationLine: 'underline'}}> Terns And Conditions</Text>
+          </Text>
         </View>
         <View >
           {checkBoxErro && (<Text style={styles.errorText}>{checkBoxErro}</Text>)}
-        </View>
+        </View>   
         <TouchableOpacity style={styles.button} onPress={handleLogin}> 
           <Text style={styles.buttonText}>CREATE ACCOUNT</Text>
-        </TouchableOpacity>
-        <Pressable style={styles.spaceSingUp}>
-          <Text style={styles.buttonText}>Already have an account?
-            <Text style={styles.singUp} onPress={handleSingIn}> Sing In</Text>
-          </Text>
-        </Pressable>
-      </View>
+        </TouchableOpacity> 
+        <View style={styles.line} />
+          <Pressable style={styles.spaceSingUp}> 
+            <Text style={styles.buttonText}>Already have an account?
+              <Text style={styles.singUp} onPress={handleSingIn}> Sing In</Text>
+            </Text>
+          </Pressable>
+        </View>
+   
     );
 };
   

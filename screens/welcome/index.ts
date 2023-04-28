@@ -3,13 +3,15 @@ import { StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
+      alignItems: 'flex-start',
       justifyContent: 'center',
       
     },
     title: {      
      color: Colors.primary,
      marginBottom: '30%',
+     marginTop: '10%',
+     marginLeft: '28%',
      fontSize: 36
     },
     inputContainer:{
@@ -41,13 +43,16 @@ const styles = StyleSheet.create({
       padding: 10,
       marginBottom: 10,
       alignItems: 'center',
+      marginRight: 35,
+      marginLeft: 35,
     },
     errorText: {
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
       textAlign: 'left',
       color: Colors.erro,
-      marginTop: -10,
+      marginTop: -12,
+      marginLeft: 60,
     },
     invalidLabel: {
       borderColor: Colors.erro,
@@ -59,8 +64,16 @@ const styles = StyleSheet.create({
       padding: 5,
       alignItems: 'center',
     },
-    spaceSingUp:{
+    line:{
+      backgroundColor: Colors.primary,
+      width:'100%',
+      height:1,
       marginTop: '50%'
+    },
+    spaceSingUp:{
+      marginTop: 20,  
+      marginBottom:20,  
+      marginLeft: '15%'
     },
     singUp: {
       color: Colors.primary
