@@ -1,56 +1,64 @@
-import { StyleSheet, Text, View,Pressable, ScrollView } from 'react-native';
+import { StyleSheet, Text, View,FlatList,Pressable,SafeAreaView} from 'react-native';
 import { Colors } from '../styles/index';
-function HomeScreen() {
-  return (
-    <ScrollView >
-      <View style={styles.gridItem}>
-      <Pressable
-        android_ripple={{ color: '#ccc' }}
-        style={({ pressed }) => [
-          styles.button,
-          pressed ? styles.buttonPressed : null,
-        ]}
-        
-      >
-        <View style={[styles.innerContainer, { backgroundColor: Colors.input }]}>
-          <Text style={styles.title}>Aqi</Text>
-        </View>
-      </Pressable>
+import React, { useState } from 'react';
+import{ NavProps } from '../types/navigation';
+
+const Arry =[
+  {id:'1',value:'1'},
+  {id:'2',value:'2'},
+  {id:'3',value:'3'},
+  {id:'4',value:'4'},
+  {id:'5',value:'5'},
+  {id:'6',value:'6'},
+  {id:'7',value:'7'},
+  {id:'8',value:'8'},
+];
+ function Card(){
+  return(
+    <View style ={styles.card}>
+      <Text></Text>
     </View>
-    </ScrollView>
   );
 }
 
-export default HomeScreen;
+function HomeScreen() {   
+  const [listItens,setListItens] = useState(Arry);
+  return(
+    <View style ={styles.container}>
+      <FlatList 
+        data={listItens}
+        numColumns={2}
+        renderItem={Card}
+        keyExtractor={(item,index)=>index.toString()}
+      />
+    </View>
+  );
+  }
 
 const styles = StyleSheet.create({
-  gridItem: {
-    flex: 1,
-    margin: 16,
-    height: 150,
-    borderRadius: 8,
-    elevation: 4,
-    backgroundColor: 'white',
-    shadowColor: 'black',
-    shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 8,
+  container:{
+    flex:1,
+    backgroundColor: Colors.background,
+    paddingHorizontal: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems:'center',
+    marginBottom: 10,
+    marginTop:50
   },
-  button: {
-    flex: 1,
+  card:{
+    flex:1,
+    backgroundColor: Colors.card,
+    height:226,
+    width:186,
+    margin: 5,
+    borderRadius:10,
   },
-  buttonPressed: {
-    opacity: 0.5,
-  },
-  innerContainer: {
-    flex: 1,
-    padding: 16,
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: 18,
+  title: {      
+    color: Colors.primary,
+    marginBottom: '25%',
+    fontSize: 36
   },
 });
+
+export default HomeScreen;

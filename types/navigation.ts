@@ -3,6 +3,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack"
 export type NavParamsList = {
   Home: undefined
   SignUp: undefined
+  Login: undefined
   Product: { id: number }
 }
 

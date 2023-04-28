@@ -3,5 +3,7 @@ export const Colors = {
     primary: '#D78F3C',
     warning: '#FF4B4B',
     input: '#656262',
-    inputPlaceHolder: '#A8A8A8'
+    inputPlaceHolder: '#DBDBDB',
+    erro: '#FA2E16',
+    card: '#F5F5F5'
   }
