@@ -4,13 +4,6 @@ import { StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container:{
       flex:1,
-      backgroundColor: Colors.background,
-      paddingHorizontal: 16,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems:'center',
-      marginBottom: 10,
-      marginTop:50
     },
     card:{
       flex:1,
@@ -22,8 +15,10 @@ const styles = StyleSheet.create({
     },
     title: {      
       color: Colors.primary,
-      marginBottom: '25%',
-      fontSize: 36
+      marginTop:15,
+      marginLeft:15,
+      marginBottom: 20,
+      fontSize: 20
     },
 });
   
