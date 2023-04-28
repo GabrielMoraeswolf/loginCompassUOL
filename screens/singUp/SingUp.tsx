@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import{ NavProps } from '../../types/navigation';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-const icons={
+const icons={ // Assets icons
   mail:require('../../assets/mail_.png'),
   lock:require('../../assets/lock_.png'),
   user:require('../../assets/user_.png')
@@ -38,7 +38,7 @@ function SignupScreen({ navigation } :NavProps) {
       setinvalidUserName(true);
       setinvalidCheckBox(true);
       setCheckBoxErro('');
-      if (!email || !password || !userName || !isChecked) {
+      if (!email || !password || !userName || !isChecked) {//component check function
         if (!email ) {
           setinvalidEmail(false)
           setEmailErro('Please enter a valid email address')

@@ -20,7 +20,7 @@ const Arry =[
   {id:'15',value:'15'},
   {id:'16',value:'16'}
 ];
- function Card(){
+ function Card(){// cards body
   return(
     <View style ={styles.card}>
       <Text></Text>
@@ -28,7 +28,7 @@ const Arry =[
   );
 }
 
-function GridCard() {   
+function GridCard() {   //flatlist with a grid of cards
   const [listItens,setListItens] = useState(Arry);
   return( 
     <View >

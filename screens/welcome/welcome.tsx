@@ -3,7 +3,7 @@ import styles from './index'
 import React, { useState } from 'react';
 import{ NavProps } from '../../types/navigation';
 
-const icons={
+const icons={// Assets icons
   mail:require('../../assets/mail_.png'),
   lock:require('../../assets/lock_.png'),
   user:require('../../assets/user_.png')
@@ -27,7 +27,7 @@ function LoginScreen({ navigation } :NavProps) {
       setinvalidEmail(true);
       setinvalidPassword(true);
 
-      if(!email || !password ){
+      if(!email || !password ){//component check function
 
         if (!email ) {
           setinvalidEmail(false)
