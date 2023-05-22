@@ -1,4 +1,4 @@
-import { Colors } from '../../Styles/Index';
+import { Colors } from '../../styles/index';
 import { StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
       textAlign: 'left',
-      color: Colors.erro,
+      color: Colors.error,
       marginTop: -12,
       marginLeft: 60
     },
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     invalidLabel: {
-      borderColor: Colors.erro,
+      borderColor: Colors.error,
       borderWidth: 2,
     },
     buttonText: {
