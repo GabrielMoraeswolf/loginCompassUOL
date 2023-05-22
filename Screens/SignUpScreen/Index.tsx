@@ -1,8 +1,8 @@
 import {  Text, View,TextInput, TouchableOpacity,Pressable,Image} from 'react-native';
 import Checkbox from 'expo-checkbox';
-import styles from './index'
+import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../types/navigation';
+import{ NavProps } from '../../Types/navigation';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const icons={ // Assets icons
@@ -10,15 +10,15 @@ const icons={ // Assets icons
   lock:require('../../assets/lock_.png'),
   user:require('../../assets/user_.png')
 }
-function SignupScreen({ navigation } :NavProps) {
+function SignUpScreen({ navigation } :NavProps) {
 
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState<string | undefined>('');
     const [emailErro, setEmailErro] = useState<string | undefined>();
     const [invalidEmail, setinvalidEmail] = useState<boolean >(true);
-    const [password, setPassword] = useState('');
+    const [password, setPassword] = useState<string | undefined>('');
     const [passwordErro, setpasswordErro] = useState<string | undefined>();
     const [invalidPassword, setinvalidPassword] = useState<boolean >(true);
-    const [userName,setUserName] = useState('');
+    const [userName,setUserName] = useState<string | undefined>('');
     const [userNameErro, setUserNameErro] = useState<string | undefined>();
     const [invalidUserName, setinvalidUserName] = useState<boolean >(true);
 
@@ -71,9 +71,9 @@ function SignupScreen({ navigation } :NavProps) {
             value={email}
           />
         </View>
-        <View >
+        < >
           {emailErro && (<Text style={styles.errorText}>{emailErro}</Text>)}
-        </View>
+        </>
         <View style={[styles.inputContainer, !invalidUserName && styles.invalidLabel ]}>
           <Image source={icons.user} style={styles.inputIcon} />
           <TextInput
@@ -83,9 +83,9 @@ function SignupScreen({ navigation } :NavProps) {
             value={userName}
           />
         </View>
-        <View >
+        < >
           {userNameErro && (<Text style={styles.errorText}>{userNameErro}</Text>)}
-        </View>
+        </>
         <View style={[styles.inputContainer, !invalidPassword && styles.invalidLabel ]}>
           <Image source={icons.lock} style={styles.inputIcon} />
           <TextInput
@@ -96,9 +96,9 @@ function SignupScreen({ navigation } :NavProps) {
             value={password}
           />
         </View>
-        <View >
+        < >
           {passwordErro && (<Text style={styles.errorText}>{passwordErro}</Text>)}
-        </View>
+        </>
         <View style={styles.checkbox}>  
           <Checkbox
             style={[styles.checkbox, !invalidCheckBox && styles.invalidLabel]}
@@ -111,9 +111,9 @@ function SignupScreen({ navigation } :NavProps) {
             <Text style={{textDecorationLine: 'underline'}}> Terns And Conditions</Text>
           </Text>
         </View>
-        <View >
+        < >
           {checkBoxErro && (<Text style={styles.errorText}>{checkBoxErro}</Text>)}
-        </View>   
+        </>   
         <TouchableOpacity style={styles.button} onPress={handleLogin}> 
           <Text style={styles.buttonText}>CREATE ACCOUNT</Text>
         </TouchableOpacity> 
@@ -128,4 +128,4 @@ function SignupScreen({ navigation } :NavProps) {
     );
 };
   
-  export default SignupScreen;
+  export default SignUpScreen;

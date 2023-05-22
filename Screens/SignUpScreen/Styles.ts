@@ -1,18 +1,41 @@
-import { Colors } from '../../styles/index';
+import { Colors } from '../../Styles/Index';
 import { StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'flex-start',
       justifyContent: 'center',
-      
+    },
+    image:{
+      marginHorizontal: 10,
+    },
+    checkbox:{
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginLeft: 20,
+      marginTop: 5,
+      marginBottom: 5
     },
     title: {      
      color: Colors.primary,
-     marginBottom: '30%',
+     marginBottom: '25%',
+     fontSize: 36,
+     marginLeft: '30%',
      marginTop: '10%',
-     marginLeft: '28%',
-     fontSize: 36
+    },
+    termsText:{
+      color: Colors.inputPlaceHolder,
+      fontSize: 13,
+      marginTop: 5,
+      marginLeft: 5,
+    },
+    errorText: {
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start',
+      textAlign: 'left',
+      color: Colors.erro,
+      marginTop: -12,
+      marginLeft: 60
     },
     inputContainer:{
       flexDirection: 'row',
@@ -34,6 +57,7 @@ const styles = StyleSheet.create({
       paddingStart: 10,
       color: Colors.inputPlaceHolder,
     },
+
     button: {
       backgroundColor: Colors.primary,
       width: '80%',
@@ -41,18 +65,11 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderRadius: 30,
       padding: 10,
-      marginBottom: 10,
-      alignItems: 'center',
-      marginRight: 35,
+      marginBottom: 16,
+      marginTop: 20,
       marginLeft: 35,
-    },
-    errorText: {
-      alignItems: 'flex-start',
-      justifyContent: 'flex-start',
-      textAlign: 'left',
-      color: Colors.erro,
-      marginTop: -12,
-      marginLeft: 60,
+      marginRight: 35,
+      alignItems: 'center',
     },
     invalidLabel: {
       borderColor: Colors.erro,
@@ -68,10 +85,10 @@ const styles = StyleSheet.create({
       backgroundColor: Colors.primary,
       width:'100%',
       height:1,
-      marginTop: '50%'
+      marginTop: '20%'
     },
     spaceSingUp:{
-      marginTop: 20,  
+      marginTop: 20,
       marginBottom:20,  
       marginLeft: '15%'
     },
@@ -79,5 +96,4 @@ const styles = StyleSheet.create({
       color: Colors.primary
     }
   });
-
   export default styles

@@ -1,7 +1,7 @@
 import { Text, View,TextInput,Image, TouchableOpacity,Pressable} from 'react-native';
-import styles from './index'
+import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../types/navigation';
+import{ NavProps } from '../../Types/navigation';
 
 const icons={// Assets icons
   mail:require('../../assets/mail_.png'),
@@ -54,9 +54,9 @@ function LoginScreen({ navigation } :NavProps) {
             value={email}
           />
         </View>
-        <View >
+        < >
           {emailErro && (<Text style={styles.errorText}>{emailErro}</Text>)}
-        </View>
+        </>
 
         <View style={[styles.inputContainer, !invalidPassword && styles.invalidLabel ]}>
           <Image source={icons.lock} style={styles.inputIcon} />
@@ -68,9 +68,9 @@ function LoginScreen({ navigation } :NavProps) {
             value={password}
           />
         </View>
-        <View >
+        < >
           {passwordErro && (<Text style={styles.errorText}>{passwordErro}</Text>)}
-        </View>
+        </>
         <TouchableOpacity style={styles.button} onPress={handleLogin}> 
           <Text style={styles.buttonText}>LOGIN</Text>
         </TouchableOpacity>

@@ -1,6 +1,6 @@
 import { Text, View} from 'react-native';
-import GridCard from './gridCard';
-import styles from './index'
+import GridCard from './GridCard';
+import styles from './Styles'
 
 function HomeScreen() {   
   return( 
