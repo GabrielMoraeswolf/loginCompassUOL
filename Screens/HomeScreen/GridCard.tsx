@@ -20,6 +20,7 @@ const Array =[
   {id:'15',value:'15'},
   {id:'16',value:'16'}
 ];
+
  function Card(){// cards body
   return(
     <View style ={styles.card}>
