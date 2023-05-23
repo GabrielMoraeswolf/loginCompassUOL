@@ -35,7 +35,7 @@ const GridCard = (): JSX.Element => {
         data={cardsData}
         numColumns={2}
         renderItem={renderCard}
-        keyExtractor={(_item, index) => index.toString()}
+        keyExtractor={(item) => item.id.toString()}
       />
     </View>
   );
