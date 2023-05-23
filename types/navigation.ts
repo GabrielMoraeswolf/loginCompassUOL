@@ -4,7 +4,7 @@ export type NavParamsList = {
   Home: undefined
   SignUp: undefined
   Login: undefined
-  ProductScreen: undefined
+  ProductScreen: {title: string, price: number, image: string}
   Product: { id: number }
 }
 

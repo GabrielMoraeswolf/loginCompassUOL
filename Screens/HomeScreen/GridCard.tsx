@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigation } from '@react-navigation/native';
 import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
+import ProductScreen from "../ProductScreen/Index";
 
 type IconData = {id: number, title: string, price: number, image: string};
 
@@ -26,12 +27,16 @@ const GridCard = (): JSX.Element => {
     }
   };
  
-    const handleCardPress = () => {
-      navigation.navigate('ProductScreen');
+    const handleCardPress = (item: IconData) => {
+      navigation.navigate('ProductScreen',{
+        title: item.title,
+        price: item.price,
+        image: item.image
+      });
     
   };
   const renderCard = ({ item }: { item: IconData }) => (
-    <TouchableOpacity style={styles.card} onPress={handleCardPress}>
+    <TouchableOpacity style={styles.card} onPress={() => handleCardPress(item)}>
       <Text style={styles.productTitle}>{item.title}</Text>
       <Image source={{ uri: item.image }} style={styles.cardImage} />
       <View style={styles.priceAndFavoriteContainer}>
