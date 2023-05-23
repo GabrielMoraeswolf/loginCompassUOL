@@ -2,13 +2,13 @@ import {  Text, View,TextInput, TouchableOpacity,Pressable,Image} from 'react-na
 import Checkbox from 'expo-checkbox';
 import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../Types/navigation';
+import{ NavProps } from '../../types/navigation';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const icons={ // Assets icons
-  mail:require('../../Assets/mail_.png'),
-  lock:require('../../Assets/lock_.png'),
-  user:require('../../Assets/user_.png')
+  mail:require('../../assets/mail_.png'),
+  lock:require('../../assets/lock_.png'),
+  user:require('../../assets/user_.png')
 }
 function SignUpScreen({ navigation } :NavProps) {
 
