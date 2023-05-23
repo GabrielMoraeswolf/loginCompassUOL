@@ -3,8 +3,7 @@ import styles from "./Styles";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import{ NavProps } from '../../types/navigation';
-type IconData = {id: number, title: string, price: number, image: string};
+type IconData = {id: number, title: string, price: string, image: string};
 
 const GridCard = (): JSX.Element => {
   const [cardsData, setCardsData] = useState<IconData[]>([]);
@@ -23,9 +22,6 @@ const GridCard = (): JSX.Element => {
     }
   };
 
-  const onPress = ({ navigation } :NavProps) => {
-    navigation.navigate('Login');
-  }
   const renderCard = ({ item}: { item: IconData, }) => (
     <TouchableOpacity style={styles.card} >     
       <Text style={styles.productTitle} >{item.title}</Text>
