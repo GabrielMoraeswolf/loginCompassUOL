@@ -6,5 +6,6 @@ export const Colors = {
     inputPlaceHolder: '#DBDBDB',
     error: '#FA2E16',
     card: '#3C3C3E',
-    cardTitle: '#F5F5F5'
+    cardTitle: '#F5F5F5',
+    priceButton: '#282729',
   }
