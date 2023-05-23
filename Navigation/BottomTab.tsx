@@ -15,13 +15,15 @@ function BottomTab() {
                 tabBarStyle: {
                     backgroundColor: Colors.tabBarColor,
                     height: 70,
+                    justifyContent: 'space-between',
+                    //paddingHorizontal: 10,
                 }
             }}   
         >
             <Tab.Screen name="Home" component={HomeScreen}
               options={{
                 tabBarIcon: ({focused}) => (
-                  <View>
+                  <View style={{marginRight: 55}}>
                     <Image 
                       source={require('../assets/home-icon-white.png')}
                       resizeMode='contain'
@@ -44,7 +46,7 @@ function BottomTab() {
               <Tab.Screen name="SignUp" component={SignUpScreen} 
               options={{
                 tabBarIcon: ({focused}) => (
-                  <View>
+                  <View style={{marginLeft: 55}}>
                     <Image 
                       source={require('../assets/basket-icon-white.png')}
                       resizeMode='contain'
@@ -69,4 +71,3 @@ function BottomTab() {
   }
 
  export default BottomTab;
- 
