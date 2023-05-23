@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         marginBottom: 8,
       },
       priceButton: {
-        backgroundColor: Colors.priceButton,
+        color: Colors.primary,
         borderRadius: 8,
         paddingVertical: 18,
         paddingHorizontal: 18,

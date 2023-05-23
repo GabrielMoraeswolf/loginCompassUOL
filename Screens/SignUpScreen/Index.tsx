@@ -3,7 +3,7 @@ import Checkbox from 'expo-checkbox';
 import styles from './Styles'
 import React, { useState } from 'react';
 import{ NavProps } from '../../types/navigation';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+
 
 const icons={ // Assets icons
   mail:require('../../assets/mail_.png'),
