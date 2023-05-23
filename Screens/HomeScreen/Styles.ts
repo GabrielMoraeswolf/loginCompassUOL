@@ -1,4 +1,4 @@
-import { Colors } from '../../Styles/Index';
+import { Colors } from '../../styles/index';
 import { StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -20,6 +20,26 @@ const styles = StyleSheet.create({
       marginBottom: 20,
       fontSize: 20,
     },
-});
+      cardImage: {
+        alignSelf: "center",
+        width: 122,
+        height: 122,
+        top: 14,
+        marginBottom: 13,
+        
+      },
+      productTitle: {
+        alignSelf: "center",
+        color: Colors.cardTitle,
+        fontSize: 12,
+        fontWeight: "700",
+        marginTop: 9,
+        marginBottom: 8,
+      },
+      priceButton: {
+        marginTop: 15,
+
+      }
+    })
   
 export default styles
