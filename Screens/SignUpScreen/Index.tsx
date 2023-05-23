@@ -61,7 +61,7 @@ function SignUpScreen({ navigation } :NavProps) {
     }
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>SING UP</Text>
+        <Text style={styles.title}>SIGN UP</Text>
         <View style={[styles.inputContainer, !invalidEmail && styles.invalidLabel ]}>
           <Image source={icons.mail} style={styles.inputIcon} />
           <TextInput
