@@ -1,7 +1,7 @@
 import { Text, View,TextInput,Image, TouchableOpacity,Pressable} from 'react-native';
 import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../types/navigation';
+import{ NavProps } from '../../Types/navigation';
 
 const icons={// Assets icons
   mail:require('../../assets/mail_.png'),

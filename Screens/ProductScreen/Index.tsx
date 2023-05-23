@@ -1,9 +1,9 @@
 import { View,Text} from 'react-native';
-
+import styles from './Styles'
 function ProductScreen(){
     return(
-        <View>
-            <Text>uu</Text>
+        <View style={styles.container}>
+            <Text style={styles.text}>Test</Text>
         </View>
     );
 };

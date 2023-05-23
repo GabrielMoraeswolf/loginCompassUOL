@@ -2,11 +2,13 @@ import { Text, View, FlatList, Image,TouchableOpacity } from "react-native";
 import styles from "./Styles";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigation } from '@react-navigation/native';
 
 type IconData = {id: number, title: string, price: string, image: string};
 
 const GridCard = (): JSX.Element => {
   const [cardsData, setCardsData] = useState<IconData[]>([]);
+  const navigation = useNavigation();
 
   useEffect(() => {
     fetchCardsData();
@@ -21,12 +23,16 @@ const GridCard = (): JSX.Element => {
       console.error("Error fetching data: ", error);
     }
   };
-
-  const renderCard = ({ item}: { item: IconData, }) => (
-    <TouchableOpacity style={styles.card} >     
-      <Text style={styles.productTitle} >{item.title}</Text>
-      <Image source={{uri: item.image }} style={styles.cardImage} />
-      <Text style={styles.priceButton}> R${item.price}</Text>
+ 
+    const handleCardPress = () => {
+      navigation.navigate('ProductScreen');
+    
+  };
+  const renderCard = ({ item }: { item: IconData }) => (
+    <TouchableOpacity style={styles.card} onPress={handleCardPress}>
+      <Text style={styles.productTitle}>{item.title}</Text>
+      <Image source={{ uri: item.image }} style={styles.cardImage} />
+      <Text style={styles.priceButton}>R${item.price}</Text>
     </TouchableOpacity>
   );
 
@@ -35,7 +41,7 @@ const GridCard = (): JSX.Element => {
       <FlatList
         data={cardsData}
         numColumns={2}
-        renderItem={renderCard}      
+        renderItem={renderCard}
         keyExtractor={(item) => item.id.toString()}
       />
     </View>
