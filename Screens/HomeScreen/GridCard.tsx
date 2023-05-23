@@ -1,46 +1,46 @@
-import {  Text, View,FlatList} from 'react-native';
-import styles from './Styles'
-import React, { useState } from 'react';
+import { Text, View, FlatList, Image, Button } from "react-native";
+import styles from "./Styles";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const Array =[
-  {id:'1',value:'1'},
-  {id:'2',value:'2'},
-  {id:'3',value:'3'},
-  {id:'4',value:'4'},
-  {id:'5',value:'5'},
-  {id:'6',value:'6'},
-  {id:'7',value:'7'},
-  {id:'8',value:'8'},
-  {id:'9',value:'9'},
-  {id:'10',value:'10'},
-  {id:'11',value:'11'},
-  {id:'12',value:'12'},
-  {id:'13',value:'13'},
-  {id:'14',value:'14'},
-  {id:'15',value:'15'},
-  {id:'16',value:'16'}
-];
- function Card(){// cards body
-  return(
-    <View style ={styles.card}>
-      <Text></Text>
+type IconData = {id: number, title: string, price: number, image: string};
+
+const GridCard = (): JSX.Element => {
+  const [cardsData, setCardsData] = useState<IconData[]>([]);
+
+  useEffect(() => {
+    fetchCardsData();
+  }, []);
+
+  const fetchCardsData = async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/products/");
+      setCardsData(response.data);
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    }
+  };
+
+  const renderCard = ({ item }: {item: IconData}) => (
+    <View style={styles.card}>
+      <Text style={styles.productTitle}>{item.title}</Text>
+      <Image source={{uri: item.image }} style={styles.cardImage} />
+      <Text style={styles.priceButton}> ${item.price}</Text>
     </View>
   );
-}
 
-function GridCard() {   //flatlist with a grid of cards
-  const [listItens,setListItens] = useState(Array);
-  return( 
-    <View >
-      <FlatList 
-        data={listItens}
+  return (
+    <View>
+      <FlatList
+        data={cardsData}
         numColumns={2}
-        renderItem={Card}
-        keyExtractor={(item,index)=>index.toString()}
+        renderItem={renderCard}
+        keyExtractor={(item) => item.id.toString()}
       />
     </View>
   );
-  }
-
+};
 
 export default GridCard;
+
+

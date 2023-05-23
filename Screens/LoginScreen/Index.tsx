@@ -1,12 +1,12 @@
 import { Text, View,TextInput,Image, TouchableOpacity,Pressable} from 'react-native';
 import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../Types/navigation';
+import{ NavProps } from '../../types/navigation';
 
 const icons={// Assets icons
-  mail:require('../../Assets/mail_.png'),
-  lock:require('../../Assets/lock_.png'),
-  user:require('../../Assets/user_.png')
+  mail:require('../../assets/mail_.png'),
+  lock:require('../../assets/lock_.png'),
+  user:require('../../assets/user_.png')
 }
 function LoginScreen({ navigation } :NavProps) {
 
