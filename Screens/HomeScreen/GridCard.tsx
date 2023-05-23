@@ -3,8 +3,10 @@ import styles from "./Styles";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const GridCard = () => {
-  const [cardsData, setCardsData] = useState([]);
+type IconData = {id: number, title: string, price: number, image: string};
+
+const GridCard = (): JSX.Element => {
+  const [cardsData, setCardsData] = useState<IconData[]>([]);
 
   useEffect(() => {
     fetchCardsData();
@@ -19,7 +21,7 @@ const GridCard = () => {
     }
   };
 
-  const renderCard = ({ item }) => (
+  const renderCard = ({ item }: {item: IconData}) => (
     <View style={styles.card}>
       <Text style={styles.productTitle}>{item.title}</Text>
       <Image source={{uri: item.image }} style={styles.cardImage} />
@@ -33,7 +35,7 @@ const GridCard = () => {
         data={cardsData}
         numColumns={2}
         renderItem={renderCard}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(_item, index) => index.toString()}
       />
     </View>
   );
