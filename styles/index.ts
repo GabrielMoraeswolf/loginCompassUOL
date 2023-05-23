@@ -4,6 +4,8 @@ export const Colors = {
     warning: '#FF4B4B',
     input: '#656262',
     inputPlaceHolder: '#DBDBDB',
-    erro: '#FA2E16',
-    card: '#F5F5F5'
+    error: '#FA2E16',
+    card: '#3C3C3E',
+    cardTitle: '#F5F5F5',
+    priceButton: '#282729',
   }

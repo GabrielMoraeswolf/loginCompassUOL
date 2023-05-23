@@ -37,8 +37,19 @@ const styles = StyleSheet.create({
         marginBottom: 8,
       },
       priceButton: {
-        marginTop: 15,
-
+        backgroundColor: Colors.priceButton,
+        borderRadius: 8,
+        paddingVertical: 18,
+        paddingHorizontal: 18,
+        width: 109,
+        height: 30,
+        left: 7
+      },
+      textButton: {
+      color: Colors.primary,
+      fontSize: 14,
+      fontWeight: "bold",
+      textAlign: "center",
       }
     })
   

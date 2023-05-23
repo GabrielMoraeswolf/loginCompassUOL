@@ -25,7 +25,7 @@ const GridCard = (): JSX.Element => {
     <View style={styles.card}>
       <Text style={styles.productTitle}>{item.title}</Text>
       <Image source={{uri: item.image }} style={styles.cardImage} />
-      <Text style={styles.priceButton}> ${item.price}</Text>
+      <Text style={styles.priceButton}> R${item.price}</Text>
     </View>
   );
 
