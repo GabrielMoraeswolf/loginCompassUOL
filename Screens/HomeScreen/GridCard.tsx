@@ -37,17 +37,13 @@ const GridCard = (): JSX.Element => {
   );
 
   return (
-    <View>
-      <FlatList
-        data={cardsData}
-        numColumns={2}
-        renderItem={renderCard}
-        keyExtractor={(item) => item.id.toString()}
-      />
-    </View>
+    <FlatList
+      data={cardsData}
+      numColumns={2}
+      renderItem={renderCard}
+      keyExtractor={(item) => item.id.toString()}
+    />
   );
 };
 
 export default GridCard;
-
-
