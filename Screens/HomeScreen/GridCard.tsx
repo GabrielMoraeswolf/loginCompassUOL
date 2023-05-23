@@ -3,8 +3,10 @@ import styles from "./Styles";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigation } from '@react-navigation/native';
+import { PriceCard } from "../../Components/PriceCard/PriceCard";
+import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 
-type IconData = {id: number, title: string, price: string, image: string};
+type IconData = {id: number, title: string, price: number, image: string};
 
 const GridCard = (): JSX.Element => {
   const [cardsData, setCardsData] = useState<IconData[]>([]);
@@ -32,7 +34,10 @@ const GridCard = (): JSX.Element => {
     <TouchableOpacity style={styles.card} onPress={handleCardPress}>
       <Text style={styles.productTitle}>{item.title}</Text>
       <Image source={{ uri: item.image }} style={styles.cardImage} />
-      <Text style={styles.priceButton}>R${item.price}</Text>
+      <View style={styles.priceAndFavoriteContainer}>
+        <PriceCard priceText={"R$"} priceNumber={item.price} />
+        <FavoriteButton />
+      </View>
     </TouchableOpacity>
   );
 
