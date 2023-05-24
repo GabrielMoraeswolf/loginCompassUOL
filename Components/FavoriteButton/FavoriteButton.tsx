@@ -16,7 +16,7 @@ const FavoriteButton = () => {
         <Ionicons
           name={isFavorite ? "heart" : "heart-outline"}
           size={33}
-          color={isFavorite ? Colors.cardTitle : Colors.cardTitle}
+          color={isFavorite ? Colors.favoriteButton : Colors.favoriteButton}
         />
       </View>
     </TouchableOpacity>
