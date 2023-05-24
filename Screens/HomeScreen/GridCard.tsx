@@ -1,10 +1,11 @@
-import { Text, View, FlatList, Image,TouchableOpacity } from "react-native";
+import { Text, View, FlatList, Image, TouchableOpacity } from "react-native";
 import styles from "./Styles";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigation } from '@react-navigation/native';
 import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
+import { useNavigation } from '@react-navigation/native';
+
 
 
 type IconData = {id: number, title: string, price: number, image: string, };
@@ -17,7 +18,6 @@ const GridCard = (): JSX.Element => {
     fetchCardsData();
   }, []);
 
- 
   const fetchCardsData = async () => {
     try {
       const response = await axios.get("https://fakestoreapi.com/products/");
