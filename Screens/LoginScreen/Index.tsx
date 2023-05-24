@@ -2,6 +2,7 @@ import { Text, View,TextInput,Image, TouchableOpacity,Pressable} from 'react-nat
 import styles from './Styles'
 import React, { useState } from 'react';
 import{ NavProps } from '../../types/navigation';
+import NotificationCard from '../../Components/NotificationCard/NotificationCard';
 
 const icons={// Assets icons
   mail:require('../../assets/mail_.png'),
@@ -43,7 +44,6 @@ function LoginScreen({ navigation } :NavProps) {
       navigation.navigate('Home');
     }
     return (
-      
       <View style={styles.container}>
         <Text style={styles.title}>WELCOME</Text>   
         <View style={[styles.inputContainer, !invalidEmail && styles.invalidLabel ]}>
@@ -82,8 +82,6 @@ function LoginScreen({ navigation } :NavProps) {
           </Text>
         </Pressable>
       </View>
-  
-
     );
 };
  
