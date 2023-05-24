@@ -13,8 +13,10 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <>
-    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.background }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.background}}>
       <StatusBar style="light" />
+      {/* SO THE CONTENT WONT BE ABOVE STATUS BAR */}
+      <View style={{ marginTop: 23}}/> 
       <Navigation />
     </SafeAreaView>
     </>
