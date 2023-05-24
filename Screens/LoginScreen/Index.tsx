@@ -43,7 +43,6 @@ function LoginScreen({ navigation } :NavProps) {
       navigation.navigate('Home');
     }
     return (
-      
       <View style={styles.container}>
         <Text style={styles.title}>WELCOME</Text>   
         <View style={[styles.inputContainer, !invalidEmail && styles.invalidLabel ]}>
@@ -82,8 +81,6 @@ function LoginScreen({ navigation } :NavProps) {
           </Text>
         </Pressable>
       </View>
-  
-
     );
 };
  

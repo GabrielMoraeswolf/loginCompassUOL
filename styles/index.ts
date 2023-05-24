@@ -10,4 +10,5 @@ export const Colors = {
     priceButton: '#282729',
     buttonBuy: '#20BE4C',
     white: '#FFFFFF',
+    tabBarColor: '#2D2D2D',
   }
