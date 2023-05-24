@@ -4,6 +4,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container:{
       flex:1,
+      backgroundColor: Colors.background,
     },
     card:{
       flex:1,
@@ -50,7 +51,34 @@ const styles = StyleSheet.create({
       fontSize: 14,
       fontWeight: "bold",
       textAlign: "center",
-      }
+      },
+      textPriceCard: {
+        position: "absolute",
+        alignSelf: "center",
+        marginTop: 6,
+        color: Colors.primary,
+        fontSize: 14,
+        fontWeight: "bold",
+        textAlign: "center",
+      },
+      priceCard: {
+        backgroundColor: Colors.priceButton,
+        borderRadius: 8,
+        paddingVertical: 15,
+        paddingHorizontal: 18,
+        width: 109,
+        height: 10,
+        left: 7,
+        marginTop: 7,
+      },
+      priceAndFavoriteContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginTop: 4,
+        marginRight: 8,
+        marginLeft: 7,
+      },
     })
   
 export default styles
