@@ -10,20 +10,24 @@ function HomeScreen({navigation}:NavProps) {
   }
 
   return( 
-    
-      <View style ={styles.container}>
-        <View style ={styles.header}>
-          <View>
-            <Text style ={styles.titleUp}> Welcome</Text>  
-            <Text style ={styles.title} >Welliton</Text>
+
+      <ScrollView>
+        <View style ={styles.container}>
+          <View style ={styles.header}>
+              <View style ={styles.headerTextContainer}>
+                <Text style ={styles.titleUp}> Welcome</Text>  
+                <Text style ={styles.title}> Welliton</Text>
+                <View style ={styles.line}/>
+            </View>
+            <View style ={styles.cartButton}>
+              <CartButton onPress={handleCartButton}/>
+            </View>     
           </View>
-          <View style ={styles.cartButton}>
-            <CartButton onPress={handleCartButton}/>
-          </View>     
+          <View style ={styles.gridContent}>
+            <GridCard/>
+          </View>
         </View>
-        <GridCard/>
-      </View>
-    
+      </ScrollView>    
   );
   }
 

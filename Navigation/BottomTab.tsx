@@ -16,6 +16,7 @@ function BottomTab() {
                     backgroundColor: Colors.tabBarColor,
                     height: 70,
                     justifyContent: 'space-between',
+                    borderTopWidth: 0,
                     //paddingHorizontal: 10,
                 }
             }}   

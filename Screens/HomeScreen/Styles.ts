@@ -15,21 +15,8 @@ const styles = StyleSheet.create({
       borderRadius:10,
       padding: 5,
     },
-    title: {      
-      color: Colors.primary,
-      marginTop:2,
-      marginLeft:15,
-      marginBottom: 20,
-      fontSize: 20,
-    },
-    titleUp: {      
-      color: Colors.white,
-      marginTop:15,
-      marginLeft:15,
-      fontSize: 15,
-    },
-      cardImage: {
-        alignSelf: "center",
+    cardImage: {
+      alignSelf: "center",
         width: 122,
         height: 122,
         top: 14,
@@ -54,10 +41,10 @@ const styles = StyleSheet.create({
         left: 7
       },
       textButton: {
-      color: Colors.primary,
-      fontSize: 14,
-      fontWeight: "bold",
-      textAlign: "center",
+        color: Colors.primary,
+        fontSize: 14,
+        fontWeight: "bold",
+        textAlign: "center",
       },
       textPriceCard: {
         position: "absolute",
@@ -88,11 +75,39 @@ const styles = StyleSheet.create({
       },
       header:{
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between'
+        alignItems: 'baseline',
+        justifyContent: 'space-between',
+        marginTop: 10,
+        //marginTop: 20,
       },
       cartButton: {
         marginRight: 30,
+        alignItems: 'flex-end',
+      },
+      headerTextContainer:{
+        marginLeft: 15,
+      },
+      title: {      
+        color: Colors.primary,
+        fontSize: 20,
+        fontWeight: '500',
+        textAlign: 'left',
+      },
+      titleUp: {      
+        color: Colors.white,
+        fontSize: 14,
+        fontWeight: '500',
+        textAlign: 'left',
+      },
+      line: {
+        borderWidth: 2,
+        width: 80,
+        borderBottomColor: Colors.white,
+        alignSelf: 'flex-start',
+      },
+      gridContent:{
+        //marginTop: 5,
+        padding: 10,
       }
     })
   
