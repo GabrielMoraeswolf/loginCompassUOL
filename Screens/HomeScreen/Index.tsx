@@ -1,5 +1,5 @@
 import { Text, View, ScrollView} from 'react-native';
-import GridCard from './GridCard';
+import GridCard from '../../Components/GridCard/GridCard';
 import styles from './Styles'
 
 function HomeScreen() {    
