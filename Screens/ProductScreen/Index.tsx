@@ -4,7 +4,7 @@ import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 import styles from "./Styles";
 
 const ProductScreen = ({ route }: { route: any }) => {
-  const { title, price, image } = route.params;
+  const { title, price, image, description } = route.params;
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -12,6 +12,7 @@ const ProductScreen = ({ route }: { route: any }) => {
         <FavoriteButton />
         </Text>
         <Image source={{ uri: image }} style={styles.cardImage} />
+        <Text style={styles.productTitle}>{description}</Text>
         <View style={styles.priceAndFavoriteContainer}>
           <PriceCard priceText={"R$"} priceNumber={price} />
           

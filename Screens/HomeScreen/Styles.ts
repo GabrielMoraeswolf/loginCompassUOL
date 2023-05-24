@@ -13,13 +13,20 @@ const styles = StyleSheet.create({
       width:186,
       margin: 5,
       borderRadius:10,
+      padding: 5,
     },
     title: {      
       color: Colors.primary,
-      marginTop:15,
+      marginTop:2,
       marginLeft:15,
       marginBottom: 20,
       fontSize: 20,
+    },
+    titleUp: {      
+      color: Colors.white,
+      marginTop:15,
+      marginLeft:15,
+      fontSize: 15,
     },
       cardImage: {
         alignSelf: "center",
@@ -81,4 +88,4 @@ const styles = StyleSheet.create({
       },
     })
   
-export default styles
+export default styles;
