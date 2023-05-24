@@ -11,7 +11,6 @@ function HomeScreen({navigation}:NavProps) {
 
   return( 
 
-      <ScrollView>
         <View style ={styles.container}>
           <View style ={styles.header}>
               <View style ={styles.headerTextContainer}>
@@ -26,8 +25,7 @@ function HomeScreen({navigation}:NavProps) {
           <View style ={styles.gridContent}>
             <GridCard/>
           </View>
-        </View>
-      </ScrollView>    
+        </View> 
   );
   }
 

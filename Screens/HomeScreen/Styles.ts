@@ -108,6 +108,7 @@ const styles = StyleSheet.create({
       gridContent:{
         //marginTop: 5,
         padding: 10,
+        flex: 1,
       }
     })
   
