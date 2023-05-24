@@ -17,10 +17,16 @@ const styles = StyleSheet.create({
     },
     title: {      
       color: Colors.primary,
-      marginTop:15,
+      marginTop:2,
       marginLeft:15,
       marginBottom: 20,
       fontSize: 20,
+    },
+    titleUp: {      
+      color: Colors.white,
+      marginTop:15,
+      marginLeft:15,
+      fontSize: 15,
     },
       cardImage: {
         alignSelf: "center",

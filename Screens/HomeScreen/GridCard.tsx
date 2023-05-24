@@ -7,7 +7,7 @@ import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 import ProductScreen from "../ProductScreen/Index";
 
-type IconData = {id: number, title: string, price: number, image: string};
+type IconData = {id: number, title: string, price: number, image: string, };//
 
 const GridCard = (): JSX.Element => {
   const [cardsData, setCardsData] = useState<IconData[]>([]);
@@ -47,12 +47,14 @@ const GridCard = (): JSX.Element => {
   );
 
   return (
+   
     <FlatList
       data={cardsData}
       numColumns={2}
       renderItem={renderCard}
       keyExtractor={(item) => item.id.toString()}
     />
+   
   );
 };
 
