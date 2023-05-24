@@ -6,7 +6,8 @@ import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 import { useNavigation } from '@react-navigation/native';
 
-type IconData = { id: number, title: string, price: number, image: string };
+
+type IconData = {id: number, title: string, price: number, image: string};
 
 const GridCard = (): JSX.Element => {
   const [cardsData, setCardsData] = useState<IconData[]>([]);
@@ -38,7 +39,7 @@ const GridCard = (): JSX.Element => {
         <PriceCard priceText={"R$"} priceNumber={item.price} />
         <FavoriteButton />
       </View>
-      </TouchableOpacity>
+    </TouchableOpacity>
   );
 
   return (
