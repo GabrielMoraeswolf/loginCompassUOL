@@ -14,7 +14,6 @@ const ProductScreen = ({ route }: { route: any }) => {
         <Image source={{ uri: image }} style={styles.cardImage} />
         <View style={styles.priceAndFavoriteContainer}>
           <PriceCard priceText={"R$"} priceNumber={price} />
-          
         </View>
       </View>
     </View>
