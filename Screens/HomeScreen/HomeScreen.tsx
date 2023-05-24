@@ -1,14 +1,16 @@
-import { Text, View,TouchableOpacity} from 'react-native';
+import { Text, View,TouchableOpacity, ScrollView} from 'react-native';
 import GridCard from './GridCard';
 import styles from './Styles'
 
 function HomeScreen() {    
 
   return( 
-    <View style ={styles.container}>    
-      <Text style ={styles.title} >HOME</Text>     
-      <GridCard/>
-    </View>
+    <ScrollView>
+      <View style ={styles.container}>    
+        <Text style ={styles.title} >HOME</Text>     
+        <GridCard/>
+      </View>
+    </ScrollView>
   );
   }
 
