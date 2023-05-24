@@ -5,9 +5,9 @@ import axios from "axios";
 import { useNavigation } from '@react-navigation/native';
 import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
-import ProductScreen from "../ProductScreen/Index";
 
-type IconData = {id: number, title: string, price: number, image: string, };//
+
+type IconData = {id: number, title: string, price: number, image: string, };
 
 const GridCard = (): JSX.Element => {
   const [cardsData, setCardsData] = useState<IconData[]>([]);
