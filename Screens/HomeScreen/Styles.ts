@@ -86,6 +86,14 @@ const styles = StyleSheet.create({
         marginRight: 8,
         marginLeft: 7,
       },
+      header:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+      },
+      cartButton: {
+        marginRight: 30,
+      }
     })
   
 export default styles;

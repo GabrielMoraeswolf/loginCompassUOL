@@ -30,6 +30,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  backButton: {
+   // marginTop: 5,
+    marginLeft: 20,
+    marginBottom: 30,
+  },
 })
   
 export default styles
