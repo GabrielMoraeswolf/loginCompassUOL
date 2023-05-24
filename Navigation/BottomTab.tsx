@@ -3,6 +3,7 @@ import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import SignUpScreen from '../Screens/SignUpScreen/Index';
 import { Colors } from '../styles';
 import { View, Image, Text } from 'react-native';
+import CartScreen from '../Screens/CartScreen/Index';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,7 +44,7 @@ function BottomTab() {
                 )
               }}/>
 
-              <Tab.Screen name="SignUp" component={SignUpScreen} 
+              <Tab.Screen name="Cart" component={CartScreen} 
               options={{
                 tabBarIcon: ({focused}) => (
                   <View style={{marginLeft: 55}}>
