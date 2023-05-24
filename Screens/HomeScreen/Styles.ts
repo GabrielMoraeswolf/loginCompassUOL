@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
       width:186,
       margin: 5,
       borderRadius:10,
+      padding: 5,
     },
     title: {      
       color: Colors.primary,
