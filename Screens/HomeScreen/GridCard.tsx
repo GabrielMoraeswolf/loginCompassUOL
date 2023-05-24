@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-type IconData = {id: number, title: string, price: number, image: string, };
+type IconData = {id: number, title: string, price: number, image: string, description: string };
 
 const GridCard = (): JSX.Element => {
   const [cardsData, setCardsData] = useState<IconData[]>([]);
@@ -31,7 +31,8 @@ const GridCard = (): JSX.Element => {
       navigation.navigate('ProductScreen',{
         title: item.title,
         price: item.price,
-        image: item.image
+        image: item.image,
+        description: item.description
       });
     
   };
