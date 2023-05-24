@@ -5,7 +5,7 @@ import styles from './Styles'
 function HomeScreen() {    
 
   return( 
-    <ScrollView>
+    <F>
       <View style ={styles.container}>    
         <Text style ={styles.title} >HOME</Text>     
         <GridCard/>
