@@ -12,4 +12,5 @@ export const Colors = {
     white: '#FFFFFF',
     tabBarColor: '#2D2D2D',
     titleText: '#A8A8A8',
+    favoriteButton: '#000000',
   }
