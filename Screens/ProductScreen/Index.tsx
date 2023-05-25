@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, Pressable, ScrollView } from "react-native";
 import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import StarsIcon from "../../Components/StarsIcon/StarsIcon"
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
@@ -7,6 +7,8 @@ import { useNavigation } from "@react-navigation/native";
 import BackButton from "../../Components/BackButton/BackButton";
 import CartButton from "../../Components/CartButton/CartButton";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
+import { useState } from "react";
+import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
 
 const ProductScreen = ({ route }: { route: any }) => {
   const { title, price, image, description } = route.params;
@@ -20,7 +22,7 @@ const ProductScreen = ({ route }: { route: any }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.otherContainer}>
 
         <View style={styles.buttonsContainer}>
@@ -53,7 +55,12 @@ const ProductScreen = ({ route }: { route: any }) => {
             <StarsIcon />
           </View>
           <View style={styles.priceContainer}>
-            <PriceCard priceText={"R$"} priceNumber={price} />
+            <View>
+              <PriceCard priceText={"R$"} priceNumber={price} />
+            </View>
+            <View >
+              <QuantityButton />
+            </View>
           </View>
           <Text style={styles.productDescription}>{description}</Text>
           <View style={styles.buyButton}>
@@ -61,7 +68,7 @@ const ProductScreen = ({ route }: { route: any }) => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 export default ProductScreen;

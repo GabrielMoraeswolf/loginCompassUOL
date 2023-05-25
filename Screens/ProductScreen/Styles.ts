@@ -66,8 +66,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   priceContainer: {
-    marginLeft: 5,
-    width: 177,
+    flexDirection:'row',
+    alignItems: 'center',
+    //padding: 10,
+    justifyContent: 'center',
+    //marginLeft: 5,
+    //width: 177,
   },
   productDescription:{
     fontSize: 11,
@@ -108,8 +112,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 5,
     marginBottom: 10,
-   }
-
+   },
 })
   
 export default styles

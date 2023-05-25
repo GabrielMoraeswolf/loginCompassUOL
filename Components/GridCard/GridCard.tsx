@@ -5,6 +5,7 @@ import axios from "axios";
 import { PriceCard } from "../PriceCard/PriceCard";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
 import { useNavigation } from "@react-navigation/native";
+import { PriceCardHome } from "../PriceCardHome/PriceCardHome";
 
 type IconData = {
   id: number;
@@ -50,7 +51,7 @@ const GridCard = (): JSX.Element => {
         </View>
         <View style={styles.priceAndFavoriteContainer}>
           <View style={styles.priceContainer}>
-            <PriceCard priceText={"R$"} priceNumber={item.price} />
+            <PriceCardHome priceText={"R$"} priceNumber={item.price} />
           </View>
           <View>
             <FavoriteButton size={33} />
