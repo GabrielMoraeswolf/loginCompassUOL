@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
         elevation: 4, //ANDROID
       },
       qtButtonText: {
-        fontSize: 48,
-        fontWeight: '600',
+        fontSize: 46,
+        fontWeight: '500',
         color: Colors.primary,
         textAlign: 'center',
         lineHeight: 52,
       },
       quantityText: {
-        fontSize: 48,
+        fontSize: 42,
         fontWeight: '400',
         color: Colors.primary,
         textAlign: 'center',
