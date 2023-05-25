@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
         //left: 7,
         //marginTop: 7,
         justifyContent: 'center',
-        shadowColor: 'rgba(0, 0, 0, 0.25)',
-        shadowOffset: {width: 0, height: 4},
+        shadowColor: 'black',
+        shadowOffset: {width: 1, height: 4},
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 4, //ANDROID
