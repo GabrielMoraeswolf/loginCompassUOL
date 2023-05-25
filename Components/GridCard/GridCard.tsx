@@ -46,7 +46,7 @@ const GridCard = (): JSX.Element => {
           {item.title}
         </Text>
         <View style={styles.imageContainer}>
-          <Image source={{ uri: item.image }} style={styles.cardImage} />
+          <Image source={{ uri: item.image }} style={styles.cardImage} resizeMode="contain" />
         </View>
         <View style={styles.priceAndFavoriteContainer}>
           <View style={styles.priceContainer}>
