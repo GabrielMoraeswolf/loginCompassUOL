@@ -15,19 +15,43 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 5,
   },
-  title: {
+  header:{
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'space-between',
+    marginTop: 10,
+    //marginTop: 20,
+  },
+  cartButton: {
+    marginRight: 30,
+    alignItems: 'flex-end',
+  },
+  headerTextContainer:{
+    marginLeft: 15,
+  },
+  title: {      
     color: Colors.primary,
-    marginTop: 5,
-    marginLeft: 23,
-    marginBottom: 20,
     fontSize: 20,
+    fontWeight: '500',
+    textAlign: 'left',
   },
-  titleUp: {
+  titleUp: {      
     color: Colors.white,
-    marginTop: 63,
-    marginLeft: 23,
-    fontSize: 15,
+    fontSize: 14,
+    fontWeight: '500',
+    textAlign: 'left',
   },
+  line: {
+    borderWidth: 3,
+    width: 55,
+    borderBottomColor: Colors.white,
+    alignSelf: 'flex-start',
+  },
+  gridContent:{
+    //marginTop: 5,
+    padding: 10,
+    flex: 1,
+  }
 });
 
 export default styles;

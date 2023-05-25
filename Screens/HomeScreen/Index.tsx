@@ -15,7 +15,7 @@ function HomeScreen({navigation}:NavProps) {
           <View style ={styles.header}>
               <View style ={styles.headerTextContainer}>
                 <Text style ={styles.titleUp}> Welcome</Text>  
-                <Text style ={styles.title}> Welliton</Text>
+                <Text style ={styles.title}> User </Text>
                 <View style ={styles.line}/>
             </View>
             <View style ={styles.cartButton}>

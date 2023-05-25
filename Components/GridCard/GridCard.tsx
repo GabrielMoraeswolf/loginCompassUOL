@@ -40,14 +40,22 @@ const GridCard = (): JSX.Element => {
     });
   };
   const renderCard = ({ item }: { item: IconData }) => (
-    <TouchableOpacity style={styles.card} onPress={() => handleCardPress(item)}>
-      <Text style={styles.productTitle} numberOfLines={1}>
-        {item.title}
-      </Text>
-      <Image source={{ uri: item.image }} style={styles.cardImage} />
-      <View style={styles.priceAndFavoriteContainer}>
-        <PriceCard priceText={"R$"} priceNumber={item.price} />
-        <FavoriteButton />
+    <TouchableOpacity style={styles.cardContainer} onPress={() => handleCardPress(item)}>
+      <View style={styles.card}>
+        <Text style={styles.productTitle} numberOfLines={1}>
+          {item.title}
+        </Text>
+        <View style={styles.imageContainer}>
+          <Image source={{ uri: item.image }} style={styles.cardImage} />
+        </View>
+        <View style={styles.priceAndFavoriteContainer}>
+          <View style={styles.priceContainer}>
+            <PriceCard priceText={"R$"} priceNumber={item.price} />
+          </View>
+          <View>
+            <FavoriteButton />
+          </View>
+        </View>
       </View>
     </TouchableOpacity>
   );
