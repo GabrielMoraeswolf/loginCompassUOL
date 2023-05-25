@@ -12,6 +12,11 @@ const styles = StyleSheet.create({
       borderRadius: 25,
       padding: 17,
       marginTop: 15,
+      shadowColor: 'black',
+      shadowOffset: {width: 1, height: 5},
+      shadowOpacity: 0.20,
+      shadowRadius: 4,
+      elevation: 4, //ANDROID
     },
     buttonText: {
       color: 'white',

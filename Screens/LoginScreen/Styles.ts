@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
       borderWidth: 2,
     },
     buttonText: {
-      color: Colors.inputPlaceHolder,
+      color: Colors.loginButtonText,
       fontSize: 18,
       padding: 5,
       alignItems: 'center',

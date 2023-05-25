@@ -77,7 +77,7 @@ function LoginScreen({ navigation } :NavProps) {
         <View style={styles.line} />
         <Pressable style={styles.spaceSingUp}>
           <Text style={styles.buttonText}>Don't have an account?
-            <Text style={styles.singUp} onPress={handleSingUp}> Sing Up</Text>
+            <Text style={styles.singUp} onPress={handleSingUp}> Sign Up</Text>
           </Text>
         </Pressable>
       </View>

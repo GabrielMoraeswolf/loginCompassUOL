@@ -120,7 +120,7 @@ function SignUpScreen({ navigation } :NavProps) {
         <View style={styles.line} />
           <Pressable style={styles.spaceSingUp}> 
             <Text style={styles.buttonText}>Already have an account?
-              <Text style={styles.singUp} onPress={handleSingIn}> Sing In</Text>
+              <Text style={styles.singUp} onPress={handleSingIn}> Log In</Text>
             </Text>
           </Pressable>
         </View>

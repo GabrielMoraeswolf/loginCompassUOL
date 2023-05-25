@@ -1,25 +1,28 @@
 import { ScrollView, View, Text, Image,Button } from "react-native";
 import styles from "./Styles";
-import ProductScreen from "../ProductScreen/Index"
-import { PriceCard } from "../../Components/PriceCard/PriceCard";
+import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 
 
 const CartScreen = ({ route }: { route: any }) => {
     const { title, price, image } = route.params;
     
     return(
-        <View style={styles.container}>
-      <View style={styles.card}>
-        <Text style={styles.productTitle}>
-          {title}
-        </Text>
-        <Image source={{ uri: image }} style={styles.cardImage} />
-        <View style={styles.priceAndFavoriteContainer}>
-          <PriceCard priceText={"R$"} priceNumber={price} />
-        </View>
-      </View>
-      
-    </View>
+        <ScrollView style ={styles.container}>
+            <View style ={styles.textContainer}>
+               <Text style ={styles.totalText}>TOTAL</Text>
+               <View style ={styles.priceContainer}>
+                    <Text style ={styles.priceText}>R$</Text>
+                    <Text style ={styles.priceText}>0.00</Text>
+               </View>
+            </View>
+            <View>
+                {/* ESPAÇO PARA O CARD */}
+                <View style={styles.line} />
+            </View>
+            <View style ={styles.buttonContainer}>
+                <PrimaryButton>BUY</PrimaryButton>
+            </View>
+        </ScrollView>
     );
 }
 

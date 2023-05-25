@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import Styles from "../../Screens/HomeScreen/Styles";
+import Styles from "./Styles";
 
 interface Props {
   priceText: string;

@@ -3,7 +3,10 @@ import { TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors } from "../../styles/index";
 
-const FavoriteButton = () => {
+type Props ={
+  size: number,
+}
+const FavoriteButton = ({size}:Props) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handlePress = () => {
@@ -15,8 +18,8 @@ const FavoriteButton = () => {
       <View>
         <Ionicons
           name={isFavorite ? "heart" : "heart-outline"}
-          size={33}
-          color={isFavorite ? Colors.cardTitle : Colors.cardTitle}
+          size={size}
+          color={isFavorite ? Colors.favoriteButton : Colors.favoriteButton}
         />
       </View>
     </TouchableOpacity>

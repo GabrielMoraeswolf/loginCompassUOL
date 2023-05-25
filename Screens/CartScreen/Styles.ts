@@ -2,34 +2,38 @@ import { StyleSheet } from "react-native";
 import { Colors } from "../../styles";
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop: 55,
-      marginLeft: 15,
-      marginRight: 15
-    },
-    card: {
-      backgroundColor: Colors.input,
-      borderRadius: 10,
-      padding: 10,
-    },
-    productTitle: {
-      fontSize: 18,
-      color: Colors.white,
-      fontWeight: "bold",
-      marginBottom: 10,
-      marginRight: 10
-    },
-    cardImage: {
-      width: "90%",
-      justifyContent: 'center',
-      height: 250,
-      marginBottom: 10,
-    },
-    priceAndFavoriteContainer: {
-      flexDirection: "row",
-      justifyContent: "space-between",
-    },
+    container:{
+        flex:1,
+        backgroundColor: Colors.background,
+      },
+      textContainer:{
+        marginLeft: 40,
+        marginTop: 80,
+      },
+      totalText: {
+        fontSize: 20,
+        fontWeight: '700',
+        color: Colors.titleText,
+      },
+      priceText:{
+        fontSize: 32,
+        fontWeight: '600',
+        color: Colors.primary,
+        marginRight: 2,
+      },
+      priceContainer: {
+        marginTop: 10,
+        flexDirection: 'row',
+      },
+      line: {
+        marginTop: 20,
+        borderWidth: 1,
+        borderBottomColor: Colors.input,
+      },
+      buttonContainer:{
+        alignItems: 'center',
+        padding: 10,
+      }
 })
 
 export default styles;

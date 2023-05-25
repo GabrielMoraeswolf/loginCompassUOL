@@ -1,10 +1,11 @@
-import { TouchableOpacity, View, Image } from "react-native";
+import { TouchableOpacity, View, Image, Pressable } from "react-native";
 import styles from "./Styles";
 
-function BackButton ({onPress}:any): JSX.Element {
+function BackButton ({action}:any) {
+
     return(
         <View>
-            <TouchableOpacity onPress={onPress}> {/* PRESS -> NAVIGATION  */}
+            <TouchableOpacity onPress={action}> 
                 <Image source={require('../../assets/arrow.png')} style={styles.arrowButton}/>
             </TouchableOpacity>
         </View>
