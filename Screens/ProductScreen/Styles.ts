@@ -6,30 +6,63 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 55,
     marginLeft: 15,
-    marginRight: 15
+    marginRight: 15,
+    
   },
   card: {
-    backgroundColor: Colors.input,
-    borderRadius: 10,
+    backgroundColor: Colors.cardProduct,
+    borderRadius: 20,
     padding: 10,
   },
+
+  headerCard:{
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'flex-start',
+    gap: 10,
+    justifyContent: 'center',
+  },
+
+  
   productTitle: {
-    fontSize: 18,
-    color: Colors.white,
+    width: '80%',
+    fontSize: 16,
+    color: Colors.background,
     fontWeight: "bold",
+    marginTop:10,
     marginBottom: 10,
-    marginRight: 10
+    marginLeft:10,
+  },
+
+  cardImageContainer:{
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   cardImage: {
-    width: "90%",
-    justifyContent: 'center',
+    width: "80%",
     height: 250,
     marginBottom: 10,
   },
-  priceAndFavoriteContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+
+  starsIconContainer:{
+    flexDirection:'row',
+    alignItems:'center',
+    gap: 3,
+    marginLeft: 10,
   },
+  priceAndFavoriteContainer: {
+   
+  },
+  productDescription:{
+    fontSize: 14,
+    color: Colors.background,
+    fontWeight: "bold",
+    marginTop:20,
+    marginBottom: 10,
+    marginLeft:10,
+    marginRight:10,
+  }
+
 })
   
 export default styles

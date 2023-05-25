@@ -3,6 +3,7 @@ import { TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors } from "../../styles/index";
 
+
 const FavoriteButton = () => {
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -15,8 +16,8 @@ const FavoriteButton = () => {
       <View>
         <Ionicons
           name={isFavorite ? "heart" : "heart-outline"}
-          size={33}
-          color={isFavorite ? Colors.cardTitle : Colors.cardTitle}
+          size={50}
+          color={isFavorite ? Colors.background : Colors.background}
         />
       </View>
     </TouchableOpacity>
