@@ -4,56 +4,68 @@ import { StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //marginTop: 55,
+    marginTop: 55,
+    marginLeft: 15,
+    marginRight: 15,
+    
   },
   card: {
-    backgroundColor: Colors.input,
-    borderRadius: 10,
+    backgroundColor: Colors.cardProduct,
+    borderRadius: 20,
     padding: 10,
     marginLeft: 20,
     marginRight: 20,
     alignItems: 'center',
   },
+
+  headerCard:{
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'flex-start',
+    gap: 10,
+    justifyContent: 'center',
+  },
+
+  
   productTitle: {
-    fontSize: 18,
-    color: Colors.white,
+    width: '80%',
+    fontSize: 16,
+    color: Colors.background,
     fontWeight: "bold",
+    marginTop:10,
     marginBottom: 10,
-    marginRight: 10
+    marginLeft:10,
+  },
+
+  cardImageContainer:{
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   cardImage: {
-    width: "90%",
-    justifyContent: 'center',
+    width: "80%",
     height: 250,
     marginBottom: 10,
   },
+
+  starsIconContainer:{
+    flexDirection:'row',
+    alignItems:'center',
+    gap: 3,
+    marginLeft: 10,
+  },
   priceAndFavoriteContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+   
   },
-  backButton: {
-   // marginTop: 5,
-    marginLeft: 25,
-    //marginBottom: 30,
-    //alignSelf: 'flex-start',
-  },
-  arrowButton:{
-    padding: 5,
-    width: 30,
-    resizeMode: 'contain',
-    borderBottomWidth: 1,
-    borderColor: 'red',
-  },
-  buttonsContainer:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: 100,
-  },
-  cartButton: {
-    marginRight: 45,
-    marginTop: 45,
-    alignSelf: 'flex-start',
+  productDescription:{
+    fontSize: 14,
+    color: Colors.background,
+    fontWeight: "bold",
+    marginTop:20,
+    marginBottom: 10,
+    marginLeft:10,
+    marginRight:10,
   }
+
 })
   
 export default styles

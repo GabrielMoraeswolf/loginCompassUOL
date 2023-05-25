@@ -3,6 +3,7 @@ import { TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Colors } from "../../styles/index";
 
+
 const FavoriteButton = () => {
   const [isFavorite, setIsFavorite] = useState(false);
 
