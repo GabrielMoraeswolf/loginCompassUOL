@@ -15,7 +15,7 @@ const ProductScreen = ({ route }: { route: any }) => {
         <Text style={styles.productTitle}>{description}</Text>
         <View style={styles.priceAndFavoriteContainer}>
           <PriceCard priceText={"R$"} priceNumber={price} />
-          
+
         </View>
       </View>
     </View>
