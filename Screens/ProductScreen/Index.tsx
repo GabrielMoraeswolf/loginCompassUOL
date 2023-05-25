@@ -21,39 +21,45 @@ const ProductScreen = ({ route }: { route: any }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.buttonsContainer}>
-          <View style={styles.backButton}>
-            <TouchableOpacity onPress={handleBackButtonPress}>
-              <Image source={require('../../assets/arrow.png')} style={styles.arrowButton}/>
-            </TouchableOpacity>
+      <View style={styles.otherContainer}>
+
+        <View style={styles.buttonsContainer}>
+            <View style={styles.backButton}>
+              <TouchableOpacity onPress={handleBackButtonPress}>
+                <Image source={require('../../assets/arrow.png')} style={styles.arrowButton}/>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.cartButton}>
+              <CartButton onPress={handleCartButtonPress} />
+            </View>
+        </View>
+
+        <View style={styles.card}>
+          <View style={styles.headerCard}>
+            <Text style={styles.productTitle}>{title}</Text>
+            <View style={styles.favoriteButton}>
+              <FavoriteButton size={45}/>
+            </View>
           </View>
-          <View style={styles.cartButton}>
-            <CartButton onPress={handleCartButtonPress} />
+          <View style={styles.imageContainer}>
+            <Image source={{ uri: image }} style={styles.cardImage} resizeMode="contain"/>
           </View>
-      </View>
-      <View style={styles.card}>
-        <View style={styles.headerCard}>
-          <Text style={styles.productTitle}>{title}</Text>
-          <FavoriteButton />
+          <View style={styles.starsIconContainer}>
+            <StarsIcon />
+            <StarsIcon />
+            <StarsIcon />
+            <StarsIcon />
+            <StarsIcon />
+          </View>
+          <View style={styles.priceContainer}>
+            <PriceCard priceText={"R$"} priceNumber={price} />
+          </View>
+          <Text style={styles.productDescription}>{description}</Text>
+          <View style={styles.buyButton}>
+            <PrimaryButton onPress={handleCartButtonPress}>ADD TO CART</PrimaryButton>
+          </View>
         </View>
-        <View style={styles.cardImageContainer}>
-          <Image source={{ uri: image }} style={styles.cardImage} />
-        </View>
-
-        <View style={styles.starsIconContainer}>
-          <StarsIcon />
-          <StarsIcon />
-          <StarsIcon />
-          <StarsIcon />
-          <StarsIcon />
-        </View>
-
-        <View style={styles.priceAndFavoriteContainer}>
-          <PriceCard priceText={"R$"} priceNumber={price} />
-
-        </View>
-        <Text style={styles.productDescription}>{description}</Text>
-
       </View>
     </View>
   );

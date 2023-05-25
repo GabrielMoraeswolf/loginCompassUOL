@@ -17,7 +17,7 @@ const StarsIcon = () => {
       <View>
         <Ionicons
           name={isFavorite ? "star" : "star-outline"}
-          size={30}
+          size={23}
           color={isFavorite ? Colors.primary : Colors.primary}
         />
       </View>
