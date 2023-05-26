@@ -1,15 +1,16 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleProp, ViewStyle } from "react-native";
 import Styles from "./Styles";
 
 interface Props {
   priceText: string;
   priceNumber: number;
+  style?: StyleProp<ViewStyle>;
 }
 
-export const PriceCardHome = ({ priceText, priceNumber }: Props): JSX.Element => {
+export const PriceCardHome = ({ style, priceText, priceNumber }: Props): JSX.Element => {
   return (
-    <View style={Styles.priceCard}>
+    <View style={[Styles.priceCard, style]}>
       <Text style={Styles.textPriceCard}>
         {priceText} {priceNumber}
       </Text>

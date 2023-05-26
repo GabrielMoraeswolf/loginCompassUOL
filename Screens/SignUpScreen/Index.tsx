@@ -2,7 +2,7 @@ import {  Text, View,TextInput, TouchableOpacity,Pressable,Image} from 'react-na
 import Checkbox from 'expo-checkbox';
 import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../types/navigation';
+import{ NavProps } from '../../Types/navigation';
 
 
 const icons={ // Assets icons
