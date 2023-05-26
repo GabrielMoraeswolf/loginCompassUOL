@@ -4,39 +4,46 @@ import StarsIcon from "../../Components/StarsIcon/StarsIcon"
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 import styles from "./Styles";
 import { useNavigation } from "@react-navigation/native";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import CartButton from "../../Components/CartButton/CartButton";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
+import { CartContext } from "../../Components/Context/CartContext";
 
 type IconData = {
+  id_: number;
   title_: string;
   price_: number;
   image_: string;
+  description_: string;
 };
 
 const ProductScreen = ({ route }: { route: any }) => {
-  const { title, price, image, description } = route.params;
+  const {id, title, price, image, description } = route.params;
   const navigation = useNavigation();
  
+  const [productId, setProductId] = useState(id);
   const [productTitle, setProductTitle] = useState(title);
   const [productPrice, setProductPrice] = useState(price);
   const [productImage, setProductImage] = useState(image);
   const [productDescription, setProductDescription] = useState(description);
 
   useEffect(() => {
+    setProductId(id);
     setProductTitle(title);
     setProductPrice(price);
     setProductImage(image);
     setProductDescription(description);
-  }, [title, price, image, description]);
+  }, [id,title, price, image, description]);
 
   const iconData: IconData = {
+    id_: productId,
     title_: productTitle,
     price_: productPrice,
     image_: productImage,
+    description_: productDescription
   };
-
+  const cartContext = useContext(CartContext);
   const handleBackButtonPress = () => {
     navigation.navigate("Home"); 
   };
@@ -44,11 +51,14 @@ const ProductScreen = ({ route }: { route: any }) => {
     navigation.navigate("Cart"); 
   };
   const handleCartButtonPressValue = () => {
-    navigation.navigate("CartValue", {
+    cartContext.addCard({
+      id: iconData.id_,
       title: iconData.title_,
       price: iconData.price_,
       image: iconData.image_,
+      description: iconData.description_
     });
+    navigation.navigate("Cart");
   };
  
   return (

@@ -2,7 +2,6 @@ import { Text, View, FlatList, Image, TouchableOpacity } from "react-native";
 import styles from "./Styles";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { PriceCard } from "../PriceCard/PriceCard";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
 import { useNavigation } from "@react-navigation/native";
 import { PriceCardHome } from "../PriceCardHome/PriceCardHome";
@@ -34,6 +33,7 @@ const GridCard = (): JSX.Element => {
 
   const handleCardPress = (item: IconData) => {
     navigation.navigate("ProductScreen", {
+      id: item.id,
       title: item.title,
       price: item.price,
       image: item.image,
