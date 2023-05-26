@@ -1,4 +1,4 @@
-import { ScrollView, View, Text,Image } from "react-native";
+import { ScrollView, View, Text,Image, Alert } from "react-native";
 import styles from "./Styles";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import { CartContext } from "../../Components/Context/CartContext";
@@ -8,6 +8,21 @@ import { PriceCard } from "../../Components/PriceCard/PriceCard";
 
 export const CartScreen = () => {
     const cartContext = useContext(CartContext);
+   
+    const handleBuyButtonPress = () => {
+      Alert.alert(
+        "Good!",
+        "Product successfully purchased.",
+        [{ text: "OK", onPress: clearCart }],
+        { cancelable: false }
+      );
+    };
+
+    const clearCart = () => {
+      cartContext.clearCart(); 
+    };
+   
+   
     return(
         <ScrollView style ={styles.container}>
             <View style ={styles.textContainer}>
@@ -39,7 +54,7 @@ export const CartScreen = () => {
       ))}
             </View>
             <View style ={styles.buttonContainer}>
-                <PrimaryButton>BUY</PrimaryButton>
+                <PrimaryButton onPress={handleBuyButtonPress}>BUY</PrimaryButton>
             </View>
         </ScrollView>
     );
