@@ -1,9 +1,10 @@
 import LoginScreen from '../Screens/LoginScreen/Index';
 import SignupScreen from '../Screens/SignUpScreen/index';
-import ProductScreen from '../Screens/ProductScreen/index';
+import ProductScreen from '../Screens/ProductScreen/Index';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Colors } from '../styles/index';
 import BottomTab from './BottomTab';
+import SignUpScreen from '../Screens/SignUpScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +17,7 @@ export default function AuthStack() {
         }}
       >
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="SignUp" component={SignupScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="ProductScreen" component={ProductScreen}/>
         <Stack.Screen name="Home" component={BottomTab} />
        {/** <Stack.Screen name="Cart" component={BottomTab}/> */}
