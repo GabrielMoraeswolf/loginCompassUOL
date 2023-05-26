@@ -12,12 +12,14 @@ type CartContextType = {
   cards: CardData[];
   addCard: (card: CardData) => void;
   removeCard: (cardId: number) => void;
+  clearCart: () => void;
 };
 
 export const CartContext = createContext<CartContextType>({
   cards: [],
   addCard: () => {},
   removeCard: () => {},
+  clearCart: () => {},
 });
 
 export const CartProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
@@ -31,8 +33,12 @@ export const CartProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     setCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
   };
 
+  const clearCart = ()=>{
+    setCards([]);
+  }
+
   return (
-    <CartContext.Provider value={{ cards, addCard ,removeCard}}>
+    <CartContext.Provider value={{ cards, addCard ,removeCard, clearCart}}>
       {children}
     </CartContext.Provider>
   );
