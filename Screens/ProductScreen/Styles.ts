@@ -113,6 +113,13 @@ const styles = StyleSheet.create({
     padding: 5,
     marginBottom: 10,
    },
+   notificationContainer: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Cor de fundo transparente para criar um efeito de sobreposição
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
 })
   
 export default styles

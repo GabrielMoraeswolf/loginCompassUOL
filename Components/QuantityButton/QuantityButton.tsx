@@ -4,10 +4,10 @@ import styles from "./Styles";
 
 
 export const QuantityButton = (): JSX.Element => {
-    const [number, setNumber] = useState(1);
+    const [number, setNumber] = useState(0);
 
     const decreaseNumber = () => {
-        if (number > 1) {
+        if (number > 0) {
         setNumber(number - 1);
         }
     };
