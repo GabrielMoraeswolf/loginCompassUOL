@@ -1,10 +1,13 @@
 import { NavigationContainer } from '@react-navigation/native';
 import AuthStack from './Authstack'
+import { CartProvider } from './CartContext';
 
 export default function Navigation() {
     return (
       <NavigationContainer>
-        <AuthStack />
+        <CartProvider>
+          <AuthStack />         
+        </CartProvider>
       </NavigationContainer>
     );
   }

@@ -4,21 +4,26 @@ import StarsIcon from "../../Components/StarsIcon/StarsIcon"
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 import styles from "./Styles";
 import { useNavigation } from "@react-navigation/native";
-import BackButton from "../../Components/BackButton/BackButton";
 import CartButton from "../../Components/CartButton/CartButton";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
-import { useState } from "react";
 import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
+import { useContext } from "react";
+import { CartContext } from "../../Navigation/CartContext";
 
 const ProductScreen = ({ route }: { route: any }) => {
   const { title, price, image, description } = route.params;
   const navigation = useNavigation();
+  const { addToCart } = useContext(CartContext);
 
   const handleBackButtonPress = () => {
     navigation.navigate("Home"); 
   };
   const handleCartButtonPress = () => {
     navigation.navigate("Cart"); 
+  };
+  const handleAddToCart = () => {
+    const item = { title, price, image, description };
+    addToCart(item); // Adicione o item ao carrinho usando a função addToCart
   };
 
   return (
@@ -64,7 +69,7 @@ const ProductScreen = ({ route }: { route: any }) => {
           </View>
           <Text style={styles.productDescription}>{description}</Text>
           <View style={styles.buyButton}>
-            <PrimaryButton onPress={handleCartButtonPress}>ADD TO CART</PrimaryButton>
+            <PrimaryButton onPress={handleAddToCart}>ADD TO CART</PrimaryButton>
           </View>
         </View>
       </View>
