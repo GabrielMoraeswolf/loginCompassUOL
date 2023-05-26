@@ -4,7 +4,6 @@ import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import { CartContext } from "../../Components/Context/CartContext";
 import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import React, {  useContext } from "react";
-import { PriceCardHome } from "../../Components/PriceCardHome/PriceCardHome";
 
 
 export const CartScreen = () => {
