@@ -21,32 +21,39 @@ export const CartScreen = () => {
                     <Text style ={styles.priceText}>{TotalPrice().toFixed(2)}</Text>
                </View>
             </View>
+            {cartContext.cards.length === 0 ? ( 
+              <View>
+                <Text style={styles.EmptyCartTextUp}>Ops, Empty Cart :{"("}</Text> 
+                <Text style={styles.EmptyCartTextDown}>Add a product</Text>
+              </View> ) : (
             <View>
-            {/* Renderizar os cards selecionados */}
-            {cartContext.cards.map((card, index) => (
-            <View key={index} style={styles.card}>
-              <Text style={styles.productTitle} numberOfLines={1}>
-                {card.title}
-              </Text>
-              <View style={styles.imageContainer}>
-                <Image
-                  source={{ uri: card.image }}
-                  style={styles.cardImage}
-                  resizeMode="contain"
-                />
-                <View>
-                  <PriceCard priceText={"R$"} priceNumber={card.price} />
+              {/* Render cards */}
+              {cartContext.cards.map((card, index) => (
+                <View key={index} style={styles.card}>
+                  <Text style={styles.productTitle} numberOfLines={1}>
+                    {card.title}
+                  </Text>
+                  <View style={styles.imageContainer}>
+                    <Image
+                      source={{ uri: card.image }}
+                      style={styles.cardImage}
+                      resizeMode="contain"
+                    />
+                    <View>
+                      <PriceCard priceText={"R$"} priceNumber={card.price} />
+                    </View>
+                  </View>
                 </View>
-
-              </View>
+              ))} 
+              <View style={styles.line} />
             </View>
-            ))}
-            <View style={styles.line} />
-            </View>
-            <View style ={styles.buttonContainer}>
-                <PrimaryButton>BUY</PrimaryButton>
-            </View>
-        </ScrollView>
+            
+          )}
+      
+      <View style={styles.buttonContainer}>
+        <PrimaryButton>BUY</PrimaryButton>
+      </View>
+    </ScrollView>
     );
-}
+};
 

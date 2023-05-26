@@ -27,6 +27,21 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: 20,
       },
+      EmptyCartTextUp:{
+        fontSize: 25,
+        justifyContent: 'center',
+        color: Colors.white,
+        marginTop: '40%',
+        marginBottom: '10%',
+        textAlign: 'center',
+      },
+      EmptyCartTextDown:{
+        textAlign: 'center',
+        fontSize: 18,
+        justifyContent: 'center',
+        marginBottom: '40%',
+        color: Colors.white,
+      },
       cardImage: {
         width: "80%",
         justifyContent: 'center',
@@ -61,7 +76,7 @@ const styles = StyleSheet.create({
       },
       buttonContainer:{
         alignItems: 'center',
-        padding: 10,
+        padding: 5,
       }
 })
 
