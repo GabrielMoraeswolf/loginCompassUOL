@@ -2,8 +2,8 @@ import { ScrollView, View, Text,Image } from "react-native";
 import styles from "./Styles";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import { CartContext } from "../../Components/Context/CartContext";
-import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import React, {  useContext } from "react";
+import { PriceCardHome } from "../../Components/PriceCardHome/PriceCardHome";
 
 
 export const CartScreen = () => {
@@ -31,7 +31,8 @@ export const CartScreen = () => {
               {/* Render cards */}
               {cartContext.cards.map((card, index) => (
                 <View key={index} style={styles.card}>
-                  <Text style={styles.productTitle} numberOfLines={1}>
+                  
+                  <Text style={styles.productTitle} numberOfLines={2}>
                     {card.title}
                   </Text>
                   <View style={styles.imageContainer}>
@@ -39,14 +40,16 @@ export const CartScreen = () => {
                       source={{ uri: card.image }}
                       style={styles.cardImage}
                       resizeMode="contain"
-                    />
-                    <View>
-                      <PriceCard priceText={"R$"} priceNumber={card.price} />
+                    /> 
                     </View>
-                  </View>
-                </View>
+                    <View style={styles.priceCardContainer}>
+                      <PriceCardHome style={styles.priceCard} priceText={"R$"} priceNumber={card.price} />
+                    </View>
+                    <View style={styles.line} />
+                   </View>
+                   
               ))} 
-              <View style={styles.line} />
+              
             </View>
             
           )}

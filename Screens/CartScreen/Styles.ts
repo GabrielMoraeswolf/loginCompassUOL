@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
         marginLeft: 40,
         marginTop: 80,
       },
-      
       cardContainer: {
         flex: 1,
         backgroundColor: Colors.white,
@@ -56,11 +55,11 @@ const styles = StyleSheet.create({
         color: Colors.white,
       },
       cardImage: {
-    alignSelf: "center",
-    width: 120,
-    height: 120,
-    top: 14,
-    marginBottom: 10,
+        alignSelf: "center",
+        width: 120,
+        height: 120,
+        top: 14,
+        marginBottom: 10,
       },
        imageContainer:{
         position: 'absolute',
@@ -92,7 +91,6 @@ const styles = StyleSheet.create({
       height: 43,
       marginTop: 10,
      },
-     
       line: {
         marginTop: 50,
         borderWidth: 1,
@@ -100,6 +98,9 @@ const styles = StyleSheet.create({
       },
       buttonContainer:{
         alignItems: 'center',
+        justifyContent: "flex-end",
+        marginTop: '5%',
+        marginBottom: '10%',
         padding: 5,
       }
 })
