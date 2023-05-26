@@ -6,7 +6,8 @@ export type NavParamsList = {
   Login: undefined
   ProductScreen: {title: string, price: number, image: string, description: string}
   Product: { id: number }
-  Cart: undefined,
+  Cart: undefined
+  CartValue: {title: string, price: number, image: string,}
 }
 
 export type NavProps = NativeStackScreenProps<NavParamsList, any>
