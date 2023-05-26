@@ -1,4 +1,4 @@
-import { Text, View, ScrollView} from 'react-native';
+import { Text, View} from 'react-native';
 import GridCard from '../../Components/GridCard/GridCard';
 import styles from './Styles'
 import CartButton from '../../Components/CartButton/CartButton';
