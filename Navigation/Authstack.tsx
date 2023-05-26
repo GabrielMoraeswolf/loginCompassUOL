@@ -1,5 +1,5 @@
-import LoginScreen from '../Screens/LoginScreen/Index';
-import SignupScreen from '../Screens/SignUpScreen/Index';
+import LoginScreen from '../Screens/LoginScreen';
+import SignupScreen from '../Screens/SignUpScreen';
 import ProductScreen from '../Screens/ProductScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {CartScreen} from '../Screens/CartScreen'
