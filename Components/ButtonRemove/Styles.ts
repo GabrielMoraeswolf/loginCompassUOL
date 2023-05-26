@@ -3,7 +3,7 @@ import { Colors } from "../../styles";
 
 const styles = StyleSheet.create({
 container: {
-    //position: 'absolute',
+    position: 'absolute',
     width: 50,
     height: 50,
     borderRadius: 25,
@@ -11,10 +11,10 @@ container: {
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: 'black',
-    shadowOffset: {width: 1, height: 4},
+    shadowOffset: {width: 1, height: 2},
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    elevation: 4, //ANDROID
+    elevation: 2, //ANDROID
   },
   text:{
     fontSize: 48,
