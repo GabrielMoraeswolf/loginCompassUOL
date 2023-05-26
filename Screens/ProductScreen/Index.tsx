@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, Image, TouchableOpacity, ScrollView, Modal } from "react-native";
 import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import StarsIcon from "../../Components/StarsIcon/StarsIcon"
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
@@ -9,6 +9,7 @@ import CartButton from "../../Components/CartButton/CartButton";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
 import { CartContext } from "../../Components/Context/CartContext";
+import NotificationCard from "../../Components/NotificationCard/NotificationCard";
 
 type IconData = {
   id_: number;
@@ -27,6 +28,7 @@ const ProductScreen = ({ route }: { route: any }) => {
   const [productPrice, setProductPrice] = useState(price);
   const [productImage, setProductImage] = useState(image);
   const [productDescription, setProductDescription] = useState(description);
+  const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     setProductId(id);
@@ -43,22 +45,31 @@ const ProductScreen = ({ route }: { route: any }) => {
     image_: productImage,
     description_: productDescription
   };
+
   const cartContext = useContext(CartContext);
+  
   const handleBackButtonPress = () => {
     navigation.navigate("Home"); 
   };
+  
   const handleCartButtonPress = () => {
     navigation.navigate("Cart"); 
   };
+  
   const handleCartButtonPressValue = () => {
     cartContext.addCard({
       id: iconData.id_,
       title: iconData.title_,
       price: iconData.price_,
       image: iconData.image_,
-      description: iconData.description_
+      description: iconData.description_,
     });
-    navigation.navigate("Cart");
+    setShowNotification(true); // Atualiza o estado para exibir o aviso
+  };
+
+  const handleNotificationOkPress = () => {
+    setShowNotification(false); // Oculta o aviso ao pressionar o botão "OK" no aviso
+   // navigation.navigate('Cart');
   };
  
   return (
@@ -112,6 +123,15 @@ const ProductScreen = ({ route }: { route: any }) => {
             <PrimaryButton onPress={handleCartButtonPressValue}>ADD TO CART</PrimaryButton>
           </View>
         </View>
+
+        <Modal visible={showNotification} transparent={true} animationType="fade">
+          <View style={styles.notificationContainer}>
+            <NotificationCard onPress={handleNotificationOkPress}>
+            Product added to cart.
+            </NotificationCard>
+          </View>
+        </Modal>
+        
       </View>
     </ScrollView>
   );

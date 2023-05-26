@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     }, 
     okContainer: {
-        marginTop: 74,
-        marginLeft: 265,
+        marginTop: 65,
+        marginLeft: 260,
     }
   });
 
