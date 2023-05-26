@@ -16,4 +16,5 @@ export const Colors = {
     titleText: '#A8A8A8',
     favoriteButton: '#000000',
     loginButtonText: "#DBDBDB",
+    removeButton: '#FF4B4B',
   }
