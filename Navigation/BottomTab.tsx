@@ -2,11 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../Screens/HomeScreen";
 import { Colors } from "../styles";
 import { View, Image, Text } from "react-native";
-<<<<<<< HEAD
-import CartScreen from "../Screens/CartScreen";
-=======
 import {CartScreen} from "../Screens/CartScreen";
->>>>>>> development
 
 const Tab = createBottomTabNavigator();
 

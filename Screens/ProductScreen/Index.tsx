@@ -4,13 +4,6 @@ import StarsIcon from "../../Components/StarsIcon/StarsIcon"
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
 import styles from "./Styles";
 import { useNavigation } from "@react-navigation/native";
-<<<<<<< HEAD
-import CartButton from "../../Components/CartButton/CartButton";
-import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
-import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
-import { useContext } from "react";
-import { CartContext } from "../../Navigation/CartContext";
-=======
 import React, { useState, useEffect, useContext } from "react";
 import CartButton from "../../Components/CartButton/CartButton";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
@@ -24,21 +17,16 @@ type IconData = {
   image_: string;
   description_: string;
 };
->>>>>>> development
 
 const ProductScreen = ({ route }: { route: any }) => {
   const {id, title, price, image, description } = route.params;
   const navigation = useNavigation();
-<<<<<<< HEAD
-  const { addToCart } = useContext(CartContext);
-=======
  
   const [productId, setProductId] = useState(id);
   const [productTitle, setProductTitle] = useState(title);
   const [productPrice, setProductPrice] = useState(price);
   const [productImage, setProductImage] = useState(image);
   const [productDescription, setProductDescription] = useState(description);
->>>>>>> development
 
   useEffect(() => {
     setProductId(id);
@@ -62,13 +50,6 @@ const ProductScreen = ({ route }: { route: any }) => {
   const handleCartButtonPress = () => {
     navigation.navigate("Cart"); 
   };
-<<<<<<< HEAD
-  const handleAddToCart = () => {
-    const item = { title, price, image, description };
-    addToCart(item); // Adicione o item ao carrinho usando a função addToCart
-  };
-
-=======
   const handleCartButtonPressValue = () => {
     cartContext.addCard({
       id: iconData.id_,
@@ -80,7 +61,6 @@ const ProductScreen = ({ route }: { route: any }) => {
     navigation.navigate("Cart");
   };
  
->>>>>>> development
   return (
     <ScrollView style={styles.container}>
       <View style={styles.otherContainer}>
@@ -129,11 +109,7 @@ const ProductScreen = ({ route }: { route: any }) => {
           </View>
           <Text style={styles.productDescription}>{productDescription}</Text>
           <View style={styles.buyButton}>
-<<<<<<< HEAD
-            <PrimaryButton onPress={handleAddToCart}>ADD TO CART</PrimaryButton>
-=======
             <PrimaryButton onPress={handleCartButtonPressValue}>ADD TO CART</PrimaryButton>
->>>>>>> development
           </View>
         </View>
       </View>
