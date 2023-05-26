@@ -1,4 +1,4 @@
-import { ScrollView, View, Text,Image } from "react-native";
+import { ScrollView, View, Text,Image,TouchableOpacity } from "react-native";
 import styles from "./Styles";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import { CartContext } from "../../Components/Context/CartContext";
@@ -12,7 +12,9 @@ export const CartScreen = () => {
     const TotalPrice = () => { //sum total price function
       return cartContext.cards.reduce((total, card) => total + card.price, 0);
     };
-
+    const removeCard = (cardId: number) => {
+      cartContext.removeCard(cardId);
+    };
     return(
         <ScrollView style ={styles.container}>
             <View style ={styles.textContainer}>
@@ -30,8 +32,14 @@ export const CartScreen = () => {
             <View>
               {/* Render cards */}
               {cartContext.cards.map((card, index) => (
+                
                 <View key={index} style={styles.card}>
+         
+    <TouchableOpacity onPress={() => removeCard(card.id)} >{/*mudar aqui o butao de remover*/}
+    <Text style={styles.buttonRemove} >X</Text>
+    </TouchableOpacity> 
                   
+                 
                   <Text style={styles.productTitle} numberOfLines={2}>
                     {card.title}
                   </Text>

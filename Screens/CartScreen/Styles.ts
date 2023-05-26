@@ -102,6 +102,9 @@ const styles = StyleSheet.create({
         marginTop: '5%',
         marginBottom: '10%',
         padding: 5,
+      },
+      buttonRemove:{
+        color: Colors.warning
       }
 })
 
