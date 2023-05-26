@@ -29,6 +29,7 @@ const ProductScreen = ({ route }: { route: any }) => {
   const [productImage, setProductImage] = useState(image);
   const [productDescription, setProductDescription] = useState(description);
   const [showNotification, setShowNotification] = useState(false);
+  const [productQuantity, setProductQuantity] = useState(1);
 
   useEffect(() => {
     setProductId(id);
@@ -55,22 +56,29 @@ const ProductScreen = ({ route }: { route: any }) => {
   const handleCartButtonPress = () => {
     navigation.navigate("Cart"); 
   };
-  
+
+  const handleQuantityChange = (newQuantity: number) => {
+    setProductQuantity(newQuantity);
+  };
+
   const handleCartButtonPressValue = () => {
-    cartContext.addCard({
-      id: iconData.id_,
-      title: iconData.title_,
-      price: iconData.price_,
-      image: iconData.image_,
-      description: iconData.description_,
-    });
-    setShowNotification(true); // Atualiza o estado para exibir o aviso
+    for (let i = 0; i < productQuantity; i++) {
+      cartContext.addCard({
+        id: iconData.id_,
+        title: iconData.title_,
+        price: iconData.price_,
+        image: iconData.image_,
+        description: iconData.description_,
+      });
+    }
+    setShowNotification(true);
   };
 
   const handleNotificationOkPress = () => {
     setShowNotification(false); // Oculta o aviso ao pressionar o botão "OK" no aviso
    // navigation.navigate('Cart');
   };
+  
  
   return (
     <ScrollView style={styles.container}>
@@ -115,7 +123,10 @@ const ProductScreen = ({ route }: { route: any }) => {
               <PriceCard priceText={"R$"} priceNumber={productPrice} />
             </View>
             <View >
-              <QuantityButton />
+              <QuantityButton
+                quantity={productQuantity}
+                onQuantityChange={handleQuantityChange}
+              />
             </View>
           </View>
           <Text style={styles.productDescription}>{productDescription}</Text>
