@@ -2,13 +2,13 @@ import {  Text, View,TextInput, TouchableOpacity,Pressable,Image} from 'react-na
 import Checkbox from 'expo-checkbox';
 import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../Types/navigation';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import{ NavProps } from '../../types/navigation';
+
 
 const icons={ // Assets icons
-  mail:require('../../Assets/mail_.png'),
-  lock:require('../../Assets/lock_.png'),
-  user:require('../../Assets/user_.png')
+  mail:require('../../assets/mail_.png'),
+  lock:require('../../assets/lock_.png'),
+  user:require('../../assets/user_.png')
 }
 function SignUpScreen({ navigation } :NavProps) {
 
@@ -61,7 +61,7 @@ function SignUpScreen({ navigation } :NavProps) {
     }
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>SING UP</Text>
+        <Text style={styles.title}>SIGN UP</Text>
         <View style={[styles.inputContainer, !invalidEmail && styles.invalidLabel ]}>
           <Image source={icons.mail} style={styles.inputIcon} />
           <TextInput
@@ -120,7 +120,7 @@ function SignUpScreen({ navigation } :NavProps) {
         <View style={styles.line} />
           <Pressable style={styles.spaceSingUp}> 
             <Text style={styles.buttonText}>Already have an account?
-              <Text style={styles.singUp} onPress={handleSingIn}> Sing In</Text>
+              <Text style={styles.singUp} onPress={handleSingIn}> Log In</Text>
             </Text>
           </Pressable>
         </View>

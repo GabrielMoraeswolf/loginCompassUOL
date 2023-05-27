@@ -1,10 +1,11 @@
-import { Colors } from '../../Styles/Index';
+import { Colors } from '../../styles/index';
 import { StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'flex-start',
       justifyContent: 'center',
+      backgroundColor: Colors.background,
     },
     image:{
       marginHorizontal: 10,
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
       textAlign: 'left',
-      color: Colors.erro,
+      color: Colors.error,
       marginTop: -12,
       marginLeft: 60
     },
@@ -72,11 +73,11 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     invalidLabel: {
-      borderColor: Colors.erro,
+      borderColor: Colors.error,
       borderWidth: 2,
     },
     buttonText: {
-      color: Colors.inputPlaceHolder,
+      color: Colors.loginButtonText,
       fontSize: 18,
       padding: 5,
       alignItems: 'center',
