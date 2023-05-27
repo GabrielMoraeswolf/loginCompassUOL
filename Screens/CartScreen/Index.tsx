@@ -51,7 +51,7 @@ export const CartScreen = () => {
                   <View style={styles.buttonRemove}>
                     <ButtonRemove onPress={() => removeCard(card.id)}/>
                   </View>
-                  <View style={styles.cardRender}>
+                  <View /* style={styles.cardRender} */>
 
                     <View style={styles.imageAndTextContainer}> 
                       <View style={styles.imageContainer}>
@@ -69,7 +69,7 @@ export const CartScreen = () => {
                         </View> 
 
                         <View style={styles.priceCardContainer}>
-                          <PriceCardHome style={styles.priceCard} priceText={"R$"} priceNumber={card.price} />
+                          <PriceCardHome /* style={styles.priceCard} */ priceText={"R$"} priceNumber={card.price} />
                         </View>
 
                       </View> 
