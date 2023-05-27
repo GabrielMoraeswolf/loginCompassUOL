@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, Image, TouchableOpacity, ScrollView, Modal } from "react-native";
 import { PriceCard } from "../../Components/PriceCard/PriceCard";
 import StarsIcon from "../../Components/StarsIcon/StarsIcon"
 import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
@@ -9,6 +9,7 @@ import CartButton from "../../Components/CartButton/CartButton";
 import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
 import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
 import { CartContext } from "../../Components/Context/CartContext";
+import NotificationCard from "../../Components/NotificationCard/NotificationCard";
 
 type IconData = {
   id_: number;
@@ -27,6 +28,8 @@ const ProductScreen = ({ route }: { route: any }) => {
   const [productPrice, setProductPrice] = useState(price);
   const [productImage, setProductImage] = useState(image);
   const [productDescription, setProductDescription] = useState(description);
+  const [showNotification, setShowNotification] = useState(false);
+  const [productQuantity, setProductQuantity] = useState(1);
 
   useEffect(() => {
     setProductId(id);
@@ -43,10 +46,13 @@ const ProductScreen = ({ route }: { route: any }) => {
     image_: productImage,
     description_: productDescription
   };
+
   const cartContext = useContext(CartContext);
+  
   const handleBackButtonPress = () => {
     navigation.navigate("Home"); 
   };
+  
   const handleCartButtonPress = () => {
     navigation.navigate("Cart"); 
   };
@@ -119,7 +125,10 @@ const ProductScreen = ({ route }: { route: any }) => {
               <PriceCard priceText={"R$"} priceNumber={productPrice} />
             </View>
             <View >
-              <QuantityButton />
+              <QuantityButton
+                quantity={productQuantity}
+                onQuantityChange={handleQuantityChange}
+              />
             </View>
           </View>
           <Text style={styles.productDescription}>{productDescription}</Text>
@@ -127,6 +136,15 @@ const ProductScreen = ({ route }: { route: any }) => {
             <PrimaryButton onPress={handleCartButtonPressValue}>ADD TO CART</PrimaryButton>
           </View>
         </View>
+
+        <Modal visible={showNotification} transparent={true} animationType="fade">
+          <View style={styles.notificationContainer}>
+            <NotificationCard onPress={handleNotificationOkPress}>
+            Product added to cart.
+            </NotificationCard>
+          </View>
+        </Modal>
+        
       </View>
     </ScrollView>
   );

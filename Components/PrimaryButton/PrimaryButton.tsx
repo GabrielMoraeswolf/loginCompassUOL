@@ -1,6 +1,5 @@
 import { View, Text, Pressable, Image } from "react-native";
 import React, { useState } from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from "./Styles";
 
 function PrimaryButton({ children, onPress }: any) { {/* PRESS -> NAVIGATION || CHILDREN -> TEXT */}
