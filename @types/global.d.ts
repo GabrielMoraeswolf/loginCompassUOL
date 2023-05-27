@@ -1,4 +1,4 @@
-import { NavParamsList } from "../Types/navigation"
+import { NavParamsList } from "../types/navigation"
 
 declare global {
   namespace ReactNavigation {
