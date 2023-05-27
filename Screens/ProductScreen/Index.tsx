@@ -60,11 +60,13 @@ const ProductScreen = ({ route }: { route: any }) => {
   const handleQuantityChange = (newQuantity: number) => {
     setProductQuantity(newQuantity);
   };
-
+  const generateRandomValue = () => {
+    return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+  };
   const handleCartButtonPressValue = () => {
     for (let i = 0; i < productQuantity; i++) {
       cartContext.addCard({
-        id: iconData.id_,
+        id: generateRandomValue(),
         title: iconData.title_,
         price: iconData.price_,
         image: iconData.image_,
