@@ -52,12 +52,9 @@ export const CartScreen = () => {
             {/* Render cards */}
             {cartContext.cards.map((card, index) => (  
               <View key={index} style={styles.card}>
-       
-       <View style={styles.buttonRemove}>
-                    <ButtonRemove onPress={() => removeCard(card.id)}/>
-                  </View>
-                
-               
+                <View style={styles.buttonRemove}>
+                  <ButtonRemove onPress={() => removeCard(card.id)}/>
+                </View>
               <Text style={styles.productTitle} numberOfLines={2}>
                 {card.title}
               </Text>
@@ -83,6 +80,3 @@ export const CartScreen = () => {
     </View>
   );
 }
-
-
-
