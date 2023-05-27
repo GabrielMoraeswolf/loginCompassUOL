@@ -11,8 +11,9 @@ import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
 import { CartContext } from "../../Components/Context/CartContext";
 import NotificationCard from "../../Components/NotificationCard/NotificationCard";
 
+
 type IconData = {
-  id_: number;
+  id_: string;
   title_: string;
   price_: number;
   image_: string;
@@ -30,6 +31,10 @@ const ProductScreen = ({ route }: { route: any }) => {
   const [productDescription, setProductDescription] = useState(description);
   const [showNotification, setShowNotification] = useState(false);
   const [productQuantity, setProductQuantity] = useState(1);
+
+  const generateRandomValue = () => {
+    return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+  };
 
   useEffect(() => {
     setProductId(id);
@@ -64,7 +69,7 @@ const ProductScreen = ({ route }: { route: any }) => {
   const handleCartButtonPressValue = () => {
     for (let i = 0; i < productQuantity; i++) {
       cartContext.addCard({
-        id: iconData.id_,
+        id: generateRandomValue(),
         title: iconData.title_,
         price: iconData.price_,
         image: iconData.image_,

@@ -18,8 +18,8 @@ export const CartScreen = () => {
         { cancelable: false }
       );
     };
-
-   
+    
+    
 
     const TotalPrice = () => { //sum total price function
       return cartContext.cards.reduce((total, card) => total + card.price, 0);
@@ -50,7 +50,7 @@ export const CartScreen = () => {
           </View> ) : (
           <View>
             {/* Render cards */}
-            {cartContext.cards.map((card, index) => (  
+            {cartContext.cards.map((card,index) => (  
               <View key={index} style={styles.card}>
        
        <View style={styles.buttonRemove}>
@@ -83,6 +83,3 @@ export const CartScreen = () => {
     </View>
   );
 }
-
-
-
