@@ -6,39 +6,71 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: Colors.background,
       },
-      textContainer:{
-        marginLeft: 40,
-        marginTop: 30,
+      titleTextContainer:{
+        marginLeft: 25,
+        marginTop: 40,
       },
-      cardContainer: {
-        flex: 1,
-        backgroundColor: Colors.white,
-        height: 226,
-        width: 186,
-        margin: 5,
-        borderRadius: 10,
-        padding: 5,
-        justifyContent: 'center',
+      totalText:{
+        fontSize: 20,
+        fontWeight: '700',
+        color: Colors.titleText,
+      },
+      priceContainer:{
+        marginTop: 5,
+        flexDirection: 'row',
+      },
+      priceText:{
+        fontSize: 32,
+        fontWeight: '600',
+        color: Colors.primary,
+        marginRight: 2,
+        marginBottom: 30,
       },
       card:{
         backgroundColor: Colors.cardProduct,
         borderRadius: 20,
-        padding: 10,
-        marginLeft: 20,
-        marginRight: 20,
-        marginBottom: 20,
-        width: 358,
+        marginLeft: 25,
+        marginRight: 25,
         height: 139,
+        marginBottom: 25,
       },
-      productTitle: {
-        width: '60%',
+      imageAndTextContainer:{
+        flexDirection:'row',
+        marginLeft: 10,
+      },
+      textAndPriceContainer:{
+        flexDirection:'column',
+        marginTop: 20,
+        padding: 5,
+        marginLeft: 8,
+      },
+      textContainer:{
+        width: 175,
+      },
+      productTitle:{
         fontSize: 14,
         color: Colors.background,
         fontWeight: "bold",
-        marginTop:10,
-        marginBottom: 10,
-        marginLeft: 130,
       },
+      imageContainer:{
+        marginBottom: 10,
+      },
+      cardImage: {
+        alignSelf: "center",
+        width: 110,
+        height: 110,
+        top: 14,
+        marginBottom: 10,
+      },
+      priceCardContainer:{
+        marginTop: 20,
+      },
+      buttonRemove:{ 
+        bottom: 12,  
+        left: 300,
+        zIndex: 1,
+      },
+     
       EmptyCartTextUp:{
         fontSize: 25,
         justifyContent: 'center',
@@ -54,43 +86,6 @@ const styles = StyleSheet.create({
         marginBottom: '40%',
         color: Colors.white,
       },
-      cardImage: {
-        alignSelf: "center",
-        width: 120,
-        height: 120,
-        top: 14,
-        marginBottom: 10,
-      },
-       imageContainer:{
-        position: 'absolute',
-        justifyContent: "center", 
-        alignItems: "center",
-        marginBottom: 10,
-      },
-      totalText: {
-        fontSize: 20,
-        fontWeight: '700',
-        color: Colors.titleText,
-      },
-      priceText:{
-        fontSize: 32,
-        fontWeight: '600',
-        color: Colors.primary,
-        marginRight: 2,
-        marginBottom: 30,
-      },
-      priceContainer: {
-        marginTop: 10,
-        flexDirection: 'row',
-      },
-      priceCardContainer: {
-        marginLeft: 128,
-      },
-      priceCard: {
-        width: 138,
-        height: 43,
-        marginTop: 10,
-      },
       line: {
         marginTop: 50,
         borderWidth: 1,
@@ -104,9 +99,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         padding: 5,
       },
-      buttonRemove:{
-        color: Colors.warning
-      }
+     
 })
 
 export default styles;
