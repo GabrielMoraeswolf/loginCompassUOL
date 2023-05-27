@@ -29,23 +29,23 @@ export const CartScreen = () => {
       cartContext.removeCard(cardId);
     };
     return(
-        <ScrollView style ={styles.container}>
-            <View style ={styles.textContainer}>
-               <Text style ={styles.totalText}>TOTAL</Text>
-               <View style ={styles.priceContainer}>
-                    <Text style ={styles.priceText}>R$</Text>
-                    <Text style ={styles.priceText}>{TotalPrice().toFixed(2)}</Text>
-               </View>
+      <View style ={styles.container}>
+        <ScrollView >
+          <View style ={styles.textContainer}>
+            <Text style ={styles.totalText}>TOTAL</Text>
+            <View style ={styles.priceContainer}>
+              <Text style ={styles.priceText}>R$</Text>
+              <Text style ={styles.priceText}>{TotalPrice().toFixed(2)}</Text>
             </View>
-            {cartContext.cards.length === 0 ? ( 
-              <View>
-                <Text style={styles.EmptyCartTextUp}>Ops, Empty Cart :{"("}</Text> 
-                <Text style={styles.EmptyCartTextDown}>Add a product</Text>
-              </View> ) : (
+          </View>
+          {cartContext.cards.length === 0 ? ( 
+            <View>
+              <Text style={styles.EmptyCartTextUp}>Ops, Empty Cart :{"("}</Text> 
+              <Text style={styles.EmptyCartTextDown}>Add a product</Text>
+            </View> ) : (
             <View>
               {/* Render cards */}
-              {cartContext.cards.map((card, index) => (
-                
+              {cartContext.cards.map((card, index) => (  
                 <View key={index} style={styles.card}>
          
     <TouchableOpacity onPress={() => removeCard(card.id)} >{/*mudar aqui o butao de remover*/}
@@ -53,32 +53,29 @@ export const CartScreen = () => {
     </TouchableOpacity> 
                   
                  
-                  <Text style={styles.productTitle} numberOfLines={2}>
-                    {card.title}
-                  </Text>
-                  <View style={styles.imageContainer}>
-                    <Image
-                      source={{ uri: card.image }}
-                      style={styles.cardImage}
-                      resizeMode="contain"
-                    /> 
-                    </View>
-                    <View style={styles.priceCardContainer}>
-                      <PriceCardHome style={styles.priceCard} priceText={"R$"} priceNumber={card.price} />
-                    </View>
-                    <View style={styles.line} />
-                   </View>
-                   
-              ))} 
-              
-            </View>
-            
-          )}
-      
-      <View style={styles.buttonContainer}>
-        <PrimaryButton onPress={handleBuyButtonPress}>BUY</PrimaryButton>
+                <Text style={styles.productTitle} numberOfLines={2}>
+                  {card.title}
+                </Text>
+                <View style={styles.imageContainer}>
+                  <Image
+                    source={{ uri: card.image }}
+                    style={styles.cardImage}
+                    resizeMode="contain"
+                  /> 
+                </View>
+                <View style={styles.priceCardContainer}>
+                  <PriceCardHome style={styles.priceCard} priceText={"R$"} priceNumber={card.price} />
+                </View>
+                  <View style={styles.line} />
+              </View>        
+            ))}            
+          </View>
+        )}
+        </ScrollView>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton onPress={handleBuyButtonPress}>BUY</PrimaryButton>
+        </View>  
       </View>
-    </ScrollView>
     );
 }
 

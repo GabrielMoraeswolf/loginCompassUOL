@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
       },
       textContainer:{
         marginLeft: 40,
-        marginTop: 80,
+        marginTop: 30,
       },
       cardContainer: {
         flex: 1,
@@ -86,21 +86,22 @@ const styles = StyleSheet.create({
       priceCardContainer: {
         marginLeft: 128,
       },
-     priceCard: {
-      width: 138,
-      height: 43,
-      marginTop: 10,
-     },
+      priceCard: {
+        width: 138,
+        height: 43,
+        marginTop: 10,
+      },
       line: {
         marginTop: 50,
         borderWidth: 1,
         borderBottomColor: Colors.input,
       },
       buttonContainer:{
-        alignItems: 'center',
-        justifyContent: "flex-end",
-        marginTop: '5%',
-        marginBottom: '10%',
+        bottom: 0,
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "center",   
+        marginBottom: 20,
         padding: 5,
       },
       buttonRemove:{

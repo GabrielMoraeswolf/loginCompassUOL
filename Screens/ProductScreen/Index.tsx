@@ -75,7 +75,7 @@ const ProductScreen = ({ route }: { route: any }) => {
   };
 
   const handleNotificationOkPress = () => {
-    setShowNotification(false); // Oculta o aviso ao pressionar o botão "OK" no aviso
+    setShowNotification(false); // Hides the warning when pressing the "OK" button on the warning
    // navigation.navigate('Cart');
   };
   
