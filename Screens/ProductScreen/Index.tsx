@@ -78,7 +78,8 @@ const ProductScreen = ({ route }: { route: any }) => {
   
 
   const handleNotificationOkPress = () => {
-    setShowNotification(false); // Oculta o aviso ao pressionar o botão "OK" no aviso
+    setShowNotification(false); 
+    setProductQuantity(1);// Oculta o aviso ao pressionar o botão "OK" no aviso
    // navigation.navigate('Cart');
   };
   
