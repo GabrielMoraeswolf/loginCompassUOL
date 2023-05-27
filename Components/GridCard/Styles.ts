@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
   },
   card :{
     alignItems: 'center',
-    //alignSelf: 'center',
   },
   imageContainer: {
     marginBottom: 10,
@@ -27,14 +26,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   productTitle: {
-   // alignSelf: "center",
     textAlign: 'left',
-    //marginLeft: 10,
     color: Colors.background,
     fontSize: 12,
     fontWeight: "700",
-    //marginTop: 9,
-   // marginBottom: 8,
     width: 145,
   },
 
@@ -43,8 +38,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: 4,
-   // marginRight: 8,
-    //marginLeft: 7,
   },
   priceContainer:{
     marginRight: 10,

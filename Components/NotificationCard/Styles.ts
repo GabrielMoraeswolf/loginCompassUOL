@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
         borderWidth: 0.5,
         padding: 5,
         shadowColor: 'rgba(0, 0, 0, 0.25)',
-        shadowOffset: {width: 0, height: 4},
+        shadowOffset: {width: 0, height: 3},
         shadowOpacity: 0.25,
         shadowRadius: 4,
-        elevation: 4, //ANDROID
+        elevation: 3, //ANDROID
     },
     textContainer: {
         marginTop: 12,

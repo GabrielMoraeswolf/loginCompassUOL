@@ -18,7 +18,7 @@ function BottomTab() {
           height: 70,
           justifyContent: "space-between",
           borderTopWidth: 0,
-          //paddingHorizontal: 10,
+        
         },
       }}
     >

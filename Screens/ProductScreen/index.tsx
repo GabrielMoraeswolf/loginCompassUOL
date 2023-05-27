@@ -50,16 +50,31 @@ const ProductScreen = ({ route }: { route: any }) => {
   const handleCartButtonPress = () => {
     navigation.navigate("Cart"); 
   };
-  const handleCartButtonPressValue = () => {
-    cartContext.addCard({
-      id: iconData.id_,
-      title: iconData.title_,
-      price: iconData.price_,
-      image: iconData.image_,
-      description: iconData.description_
-    });
-    navigation.navigate("Cart");
+
+  const handleQuantityChange = (newQuantity: number) => {
+    setProductQuantity(newQuantity);
   };
+  const generateRandomValue = () => {
+    return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+  };
+  const handleCartButtonPressValue = () => {
+    for (let i = 0; i < productQuantity; i++) {
+      cartContext.addCard({
+        id: generateRandomValue(),
+        title: iconData.title_,
+        price: iconData.price_,
+        image: iconData.image_,
+        description: iconData.description_,
+      });
+    }
+    setShowNotification(true);
+  };
+
+  const handleNotificationOkPress = () => {
+    setShowNotification(false); // Hides the warning when pressing the "OK" button on the warning
+    setProductQuantity(1);
+  };
+  
  
   return (
     <ScrollView style={styles.container}>
