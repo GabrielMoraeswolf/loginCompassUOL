@@ -78,7 +78,7 @@ const ProductScreen = ({ route }: { route: any }) => {
 
   const handleNotificationOkPress = () => {
     setShowNotification(false); // Hides the warning when pressing the "OK" button on the warning
-   // navigation.navigate('Cart');
+    setProductQuantity(1);
   };
   
  
