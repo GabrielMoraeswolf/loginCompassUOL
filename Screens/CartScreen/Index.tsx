@@ -13,9 +13,10 @@ export const CartScreen = () => {
     const TotalPrice = () => { //sum total price function
       return cartContext.cards.reduce((total, card) => total + card.price, 0);
     };
-    const removeCard = (cardId: number) => {
+    const removeCard = (cardId: string) => {
       cartContext.removeCard(cardId);
     };
+    
     const clearCart = () => {
       cartContext.clearCart(); 
     };
@@ -45,11 +46,11 @@ export const CartScreen = () => {
               </View> ) : (
             <View>
               {/* Render cards */}
-              {cartContext.cards.map((card, index) => (
+              {cartContext.cards.map((card) => (
                 
-                <View key={index} style={styles.card}>
+                <View key={card.cardId} style={styles.card}>
                   <View style={styles.buttonRemove}>
-                    <ButtonRemove onPress={() => removeCard(card.id)}/>
+                    <ButtonRemove onPress={() => removeCard(card.cardId)}/>
                   </View>
                   <View /* style={styles.cardRender} */>
 

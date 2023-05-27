@@ -1,17 +1,18 @@
 import React, { createContext, useState } from "react";
 
 type CardData = {
-    id: number;
-    title: string;
-    price: number;
-    image: string;
-    description: string;
+  cardId: string;
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+  description: string;
 };
 
 type CartContextType = {
   cards: CardData[];
   addCard: (card: CardData) => void;
-  removeCard: (cardId: number) => void;
+  removeCard: (cardId: string) => void;
   clearCart: () => void;
 };
 
@@ -29,17 +30,16 @@ export const CartProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     setCards((prevCards) => [...prevCards, card]);
   };
 
-  const removeCard = (cardId: number) => {
-    setCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
+  const removeCard = (cardId: string) => {
+    setCards((prevCards) => prevCards.filter((card) => card.cardId !== cardId));
   };
 
   const clearCart = () => {
-    setCards([]); // Limpa o array de cards
+    setCards([]);
   };
 
-
   return (
-    <CartContext.Provider value={{ cards, addCard ,removeCard,  clearCart}}>
+    <CartContext.Provider value={{ cards, addCard, removeCard, clearCart }}>
       {children}
     </CartContext.Provider>
   );

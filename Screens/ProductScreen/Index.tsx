@@ -63,7 +63,9 @@ const ProductScreen = ({ route }: { route: any }) => {
 
   const handleCartButtonPressValue = () => {
     for (let i = 0; i < productQuantity; i++) {
+      const cardId = `${iconData.id_}_${i}`; // Gera o cardId único
       cartContext.addCard({
+        cardId, // Atribui o cardId ao card
         id: iconData.id_,
         title: iconData.title_,
         price: iconData.price_,
@@ -73,6 +75,7 @@ const ProductScreen = ({ route }: { route: any }) => {
     }
     setShowNotification(true);
   };
+  
 
   const handleNotificationOkPress = () => {
     setShowNotification(false); // Oculta o aviso ao pressionar o botão "OK" no aviso
