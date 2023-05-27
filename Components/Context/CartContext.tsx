@@ -33,13 +33,12 @@ export const CartProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     setCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
   };
 
-  const clearCart = () => {
-    setCards([]); // Limpa o array de cards
-  };
-
+  const clearCart = ()=>{
+    setCards([]);
+  }
 
   return (
-    <CartContext.Provider value={{ cards, addCard ,removeCard,  clearCart}}>
+    <CartContext.Provider value={{ cards, addCard ,removeCard, clearCart}}>
       {children}
     </CartContext.Provider>
   );
