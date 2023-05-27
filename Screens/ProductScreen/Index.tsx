@@ -63,7 +63,7 @@ const ProductScreen = ({ route }: { route: any }) => {
 
   const handleCartButtonPressValue = () => {
     for (let i = 0; i < productQuantity; i++) {
-      const cardId = `${iconData.id_}_${i}`; // Gera o cardId único
+      const cardId = `${iconData.id_}_${i}_${i}_${i}`; // Gera o cardId único
       cartContext.addCard({
         cardId, // Atribui o cardId ao card
         id: iconData.id_,
