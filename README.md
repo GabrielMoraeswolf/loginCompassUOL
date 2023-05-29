@@ -76,3 +76,9 @@
     <td>Expo</td>
   </tr>
 </table>
+
+
+## Authors:
+* Felipe de Melo Lemos
+* Gabriel Rodigues de Moraes
+* Ismael Kentenich Mesquita Andrade
