@@ -54,7 +54,7 @@ const GridCard = (): JSX.Element => {
             <PriceCardHome priceText={"R$"} priceNumber={item.price} />
           </View>
           <View>
-            <FavoriteButton size={33} />
+            <FavoriteButton size={33} productId={item.id} />
           </View>
         </View>
       </View>

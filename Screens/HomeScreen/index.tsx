@@ -23,7 +23,7 @@ function HomeScreen({navigation}:NavProps) {
             </View>     
           </View>
           <View style ={styles.gridContent}>
-            <GridCard/>
+            <GridCard />
           </View>
         </View> 
   );
