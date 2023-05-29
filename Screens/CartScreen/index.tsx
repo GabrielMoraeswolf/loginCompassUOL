@@ -11,12 +11,17 @@ export const CartScreen = () => {
     const cartContext = useContext(CartContext);
 
     const handleBuyButtonPress = () => {
-      Alert.alert(
-        "Good!",
-        "Product successfully purchased.",
-        [{ text: "OK", onPress: clearCart }],
-        { cancelable: false }
-      );
+      if (cartContext.cards.length === 0) {
+        return;
+      }
+      else {
+        Alert.alert(
+          "Good!",
+          "Product successfully purchased.",
+          [{ text: "OK", onPress: clearCart }],
+          { cancelable: false }
+        );
+      }
     };
 
    
@@ -30,7 +35,7 @@ export const CartScreen = () => {
     const clearCart = () => {
       cartContext.clearCart(); 
     };
-
+    const isCartEmpty = cartContext.cards.length === 0;
     
     
     return(
@@ -75,7 +80,7 @@ export const CartScreen = () => {
       )}
       </ScrollView>
       <View style={styles.buttonContainer}>
-        <PrimaryButton onPress={handleBuyButtonPress}>BUY</PrimaryButton>
+        <PrimaryButton onPress={handleBuyButtonPress} disabled={isCartEmpty} >BUY</PrimaryButton>
       </View>  
     </View>
   );

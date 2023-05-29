@@ -44,7 +44,20 @@ const styles = StyleSheet.create({
       height: 15,
       borderRadius: 7.5,
       backgroundColor: "green",
-    }
+    },
+    disabledButton:{
+      backgroundColor: '#178535',
+      width: 260,
+      height: 55,
+      borderRadius: 25,
+      padding: 17,
+      marginTop: 15,
+      shadowColor: 'black',
+      shadowOffset: {width: 1, height: 5},
+      shadowOpacity: 0.20,
+      shadowRadius: 4,
+      elevation: 4,
+    },
   });
 
   export default styles
