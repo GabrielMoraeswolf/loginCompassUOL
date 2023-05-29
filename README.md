@@ -8,9 +8,9 @@
 + password
 + validation
 
-![235218150-2287790c-94f6-4e8d-9773-0c6f8686e060](https://github.com/GabrielMoraeswolf/SuperCars_site/assets/58598993/ed14c9e5-e0f0-4078-b932-3649a522e245)
+![Captura de Tela (125)](https://github.com/GabrielMoraeswolf/BFS/assets/58598993/50afb38b-c8fb-4fa6-877d-3f7cbad0a32b)
 ![Captura de Tela (123)](https://github.com/GabrielMoraeswolf/SuperCars_site/assets/58598993/b1128249-a893-4c5f-8001-c4b5702810f4)
-## Also that, has a sing up with this fields:
+## Also that, has a sign up with this fields:
 
 + name
 + userName
@@ -18,7 +18,8 @@
 + password
 + validation
 
-![Captura de Tela (108)](https://user-images.githubusercontent.com/58598993/235218390-86b8e753-59d3-4297-847e-023b43bb5afd.png)
+
+![Captura de Tela (126)](https://github.com/GabrielMoraeswolf/BFS/assets/58598993/1b207481-ff49-4c1a-a3b2-b80d8a51a7f6)
 ![Captura de Tela (124)](https://github.com/GabrielMoraeswolf/SuperCars_site/assets/58598993/0dded82b-f9a9-47b6-810a-700bd601537a)
 
 ## And, has a Home with this fields:
