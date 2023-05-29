@@ -7,6 +7,7 @@ import { View } from 'react-native';
 import { SafeAreaView } from 'react-native';
 import { Colors } from './styles';
 import { CartProvider } from './Components/Context/CartContext';
+import { FavoriteProvider } from './Components/Context/FavoriteContext';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,12 +15,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <CartProvider>
+      <FavoriteProvider>
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.background}}>
           <StatusBar style="light" />
           {/* SO THE CONTENT WONT BE ABOVE STATUS BAR */}
           <View style={{ marginTop: 23}}/> 
           <Navigation />
         </SafeAreaView>
+        </FavoriteProvider>
       </CartProvider>
     </NavigationContainer>
   );

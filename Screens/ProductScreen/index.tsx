@@ -103,7 +103,7 @@ const ProductScreen = ({ route }: { route: any }) => {
           <View style={styles.headerCard}>
             <Text style={styles.productTitle}>{productTitle}</Text>
             <View style={styles.favoriteButton}>
-              <FavoriteButton size={45}/>
+              <FavoriteButton size={45} productId={id} />
             </View>
           </View>
           <View style={styles.imageContainer}>
