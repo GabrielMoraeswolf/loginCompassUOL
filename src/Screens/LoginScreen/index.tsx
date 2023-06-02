@@ -1,7 +1,7 @@
 import { Text, View,TextInput,Image, TouchableOpacity,Pressable} from 'react-native';
 import styles from './Styles'
 import React, { useState } from 'react';
-import{ NavProps } from '../../types/navigation';
+import{ NavProps } from '../../../types/navigation';
 
 const icons={// Assets icons
   mail:require('../../assets/mail_.png'),
@@ -10,11 +10,11 @@ const icons={// Assets icons
 }
 function LoginScreen({ navigation } :NavProps) {
 
-    const [email, setEmail] = useState('');
-    const [emailErro, setEmailErro] = useState<string | undefined>();
+    const [email, setEmail] = useState<string>('');
+    const [emailErro, setEmailErro] = useState<string>();
     const [invalidEmail, setinvalidEmail] = useState<boolean >(true);
-    const [password, setPassword] = useState('');
-    const [passwordErro, setpasswordErro] = useState<string | undefined>();
+    const [password, setPassword] = useState<string >('');
+    const [passwordErro, setpasswordErro] = useState<string >();
     const [invalidPassword, setinvalidPassword] = useState<boolean >(true);
   
     

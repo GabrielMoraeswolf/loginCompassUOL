@@ -1,15 +1,15 @@
 import { View, Text, Image, TouchableOpacity, ScrollView, Modal } from "react-native";
-import { PriceCard } from "../../Components/PriceCard/PriceCard";
-import StarsIcon from "../../Components/StarsIcon/StarsIcon"
-import FavoriteButton from "../../Components/FavoriteButton/FavoriteButton";
+import { PriceCard } from "../../../Components/PriceCard";
+import StarsIcon from "../../../Components/StarsIcon"
+import FavoriteButton from "../../../Components/FavoriteButton";
 import styles from "./Styles";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState, useEffect, useContext } from "react";
-import CartButton from "../../Components/CartButton/CartButton";
-import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
-import { QuantityButton } from "../../Components/QuantityButton/QuantityButton";
-import { CartContext } from "../../Components/Context/CartContext";
-import NotificationCard from "../../Components/NotificationCard/NotificationCard";
+import CartButton from "../../../Components/CartButton";
+import PrimaryButton from "../../../Components/PrimaryButton";
+import { QuantityButton } from "../../../Components/QuantityButton";
+import { CartContext } from "../../../Components/Context/CartContext";
+import NotificationCard from "../../../Components/NotificationCard";
 
 type IconData = {
   id_: number;
@@ -23,13 +23,13 @@ const ProductScreen = ({ route }: { route: any }) => {
   const {id, title, price, image, description } = route.params;
   const navigation = useNavigation();
  
-  const [productId, setProductId] = useState(id);
-  const [productTitle, setProductTitle] = useState(title);
-  const [productPrice, setProductPrice] = useState(price);
+  const [productId, setProductId] = useState<number>(id);
+  const [productTitle, setProductTitle] = useState<string>(title);
+  const [productPrice, setProductPrice] = useState<number>(price);
   const [productImage, setProductImage] = useState(image);
-  const [productDescription, setProductDescription] = useState(description);
-  const [showNotification, setShowNotification] = useState(false);
-  const [productQuantity, setProductQuantity] = useState(1);
+  const [productDescription, setProductDescription] = useState <string>(description);
+  const [showNotification, setShowNotification] = useState<boolean>(false);
+  const [productQuantity, setProductQuantity] = useState<number>(1);
 
   useEffect(() => {
     setProductId(id);

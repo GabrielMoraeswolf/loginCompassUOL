@@ -1,8 +1,8 @@
 import { Text, View} from 'react-native';
-import GridCard from '../../Components/GridCard/GridCard';
+import GridCard from '../../Component/GridCard';
 import styles from './Styles'
-import CartButton from '../../Components/CartButton/CartButton';
-import { NavProps } from '../../types/navigation';
+import CartButton from '../../../Components/CartButton';
+import { NavProps } from '../../../types/navigation';
 
 function HomeScreen({navigation}:NavProps) {    
   const handleCartButton = () => {

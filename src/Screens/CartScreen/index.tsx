@@ -1,10 +1,10 @@
 import { ScrollView, View, Text,Image,TouchableOpacity,Alert } from "react-native";
 import styles from "./Styles";
-import PrimaryButton from "../../Components/PrimaryButton/PrimaryButton";
-import { CartContext } from "../../Components/Context/CartContext";
+import PrimaryButton from "../../../Components/PrimaryButton";
+import { CartContext } from "../../../Components/Context/CartContext";
 import React, {  useContext } from "react";
-import { PriceCardHome } from "../../Components/PriceCardHome/PriceCardHome";
-import ButtonRemove from "../../Components/ButtonRemove/ButtonRemove";
+import { PriceCardHome } from "../../../Components/PriceCardHome";
+import ButtonRemove from "../../../Components/ButtonRemove";
 
 
 export const CartScreen = () => {

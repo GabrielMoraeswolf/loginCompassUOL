@@ -2,9 +2,9 @@ import { Text, View, FlatList, Image, TouchableOpacity } from "react-native";
 import styles from "./Styles";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import FavoriteButton from "../../../Components/FavoriteButton";
 import { useNavigation } from "@react-navigation/native";
-import { PriceCardHome } from "../PriceCardHome/PriceCardHome";
+import { PriceCardHome } from "../../../Components/PriceCardHome";
 
 type IconData = {
   id: number;
