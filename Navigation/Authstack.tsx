@@ -1,9 +1,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Colors } from '../styles/index';
 import BottomTab from './BottomTab';
-import LoginScreen from '../Screens/LoginScreen';
-import ProductScreen from '../Screens/ProductScreen';
-import SignUpScreen from '../Screens/SignUpScreen';
+import LoginScreen from '../src/Screens/LoginScreen';
+import ProductScreen from '../src/Screens/ProductScreen';
+import SignUpScreen from '../src/Screens/SignUpScreen';
 
 const Stack = createNativeStackNavigator();
 

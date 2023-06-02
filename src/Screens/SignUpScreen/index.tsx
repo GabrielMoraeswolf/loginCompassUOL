@@ -6,9 +6,9 @@ import{ NavProps } from '../../../types/navigation';
 
 
 const icons={ // Assets icons
-  mail:require('../../assets/mail_.png'),
-  lock:require('../../assets/lock_.png'),
-  user:require('../../assets/user_.png')
+  mail:require('../../../assets/mail_.png'),
+  lock:require('../../../assets/lock_.png'),
+  user:require('../../../assets/user_.png')
 }
 function SignUpScreen({ navigation } :NavProps) {
 

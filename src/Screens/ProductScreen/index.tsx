@@ -89,7 +89,7 @@ const ProductScreen = ({ route }: { route: any }) => {
             <View style={styles.backButton}>
               <TouchableOpacity onPress={handleBackButtonPress}>
                 <Image 
-                  source={require('../../assets/arrow.png')} 
+                  source={require('../../../assets/arrow.png')} 
                   style={styles.arrowButton}
                 />
               </TouchableOpacity>
